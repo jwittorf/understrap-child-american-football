@@ -87,3 +87,16 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+/**
+ * Add custom menus
+ */
+function understrap_child_customize_menus() {
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus(
+		array (
+			'topnav' => __( 'Top additional Menu', 'understrap-child' ),
+		)
+	);
+}
+add_action( 'after_setup_theme', 'understrap_child_customize_menus' );
