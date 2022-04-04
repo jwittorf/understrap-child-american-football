@@ -15,6 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_nav_menu([
 		'theme_location' => 'topnav',
 		'menu_class' => 'nav justify-content-end',
+		'depth' => 1,
 		'walker' => new Understrap_WP_Bootstrap_Navwalker()
 	]); ?>
 </div>
