@@ -52,7 +52,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
  * Load the child theme's text domain
  */
 function add_child_theme_textdomain() {
-	load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
+	load_child_theme_textdomain( 'understrap_child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
@@ -97,7 +97,7 @@ function understrap_child_customize_menus() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array (
-			'topnav' => __( 'Top additional Menu', 'understrap-child' ),
+			'topnav' => __( 'Top additional Menu', 'understrap_child' ),
 		)
 	);
 }
