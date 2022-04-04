@@ -58,6 +58,7 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
 
 
+
 /**
  * Overrides the theme_mod to default to Bootstrap 5
  *
@@ -88,6 +89,7 @@ function understrap_child_customize_controls_js() {
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
+// TODO: move to own file?
 /**
  * Add custom menus
  */
@@ -100,3 +102,29 @@ function understrap_child_customize_menus() {
 	);
 }
 add_action( 'after_setup_theme', 'understrap_child_customize_menus' );
+
+// UnderStrap child's includes directory (different to parent, otherwise would overwrite entire file).
+$understrap_inc_dir = 'includes';
+
+// Array of files to include.
+$understrap_includes = array(
+//	'/theme-settings.php',                  // Initialize theme default settings.
+//	'/setup.php',                           // Theme setup and custom theme supports.
+//	'/widgets.php',                         // Register widget area.
+//	'/enqueue.php',                         // Enqueue scripts and styles.
+//	'/template-tags.php',                   // Custom template tags for this theme.
+//	'/pagination.php',                      // Custom pagination for this theme.
+//	'/hooks.php',                           // Custom hooks.
+//	'/extras.php',                          // Custom functions that act independently of the theme templates.
+	'/customizer.php',                      // Customizer additions.
+//	'/custom-comments.php',                 // Custom Comments file.
+//	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/understrap/understrap/issues/567.
+//	'/editor.php',                          // Load Editor functions.
+//	'/block-editor.php',                    // Load Block Editor functions.
+//	'/deprecated.php',                      // Load deprecated functions.
+);
+
+// Include files.
+foreach ( $understrap_includes as $file ) {
+	require_once get_theme_file_path( $understrap_inc_dir . $file );
+}
