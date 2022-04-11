@@ -34,10 +34,16 @@ if ( is_front_page() ) {
 								'category_name' => 'homepage-slider'
 							)
 						);
-						while ( $homepage_slider_posts->have_posts() ) {
-							$homepage_slider_posts->the_post();
+						if ( $homepage_slider_posts->have_posts() ) {
+							echo '<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel"><div class="carousel-inner">';
+							$counter = 1;
+							while ( $homepage_slider_posts->have_posts() ) {
+								$homepage_slider_posts->the_post();
 //							get_template_part( 'loop-templates/content', 'posts' );
-							get_template_part( 'loop-templates/hero', 'homepage-slider-posts' );
+								get_template_part( 'loop-templates/hero', 'homepage-slider-posts', array('counter' =>
+									                                                                         $counter++) );
+							}
+							echo '</div></div>';
 						}
 						?>
 
