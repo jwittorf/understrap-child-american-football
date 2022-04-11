@@ -35,7 +35,7 @@ if ( !function_exists( 'understrap_child_theme_customize_register' ) ) {
 				array (
 					'label'             => __( 'Topnav Positioning', 'understrap_child' ),
 					'description'       => __(
-						'Set topnav\'s default position. Reference: <a href="https://getbootstrap.com/docs/5.1/utilities/flex/#justify-content" target="_blank">Bootstrap</a> and <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content" target="_blank">Flexbox in general</a>.  Note: this can be overridden on individual pages.',
+						'Set topnav\'s default position. Reference: <a href="https://getbootstrap.com/docs/5.1/utilities/flex/#justify-content" target="_blank">Bootstrap</a> and <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content" target="_blank">Flexbox in general</a>.',
 						'understrap_child'
 					),
 					'section'           => 'understrap_child_theme_layout_options',

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-04-11T14:18:43+02:00\n"
+"POT-Creation-Date: 2022-04-11T14:54:24+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: understrap_child\n"
@@ -51,7 +51,7 @@ msgid "Topnav Positioning"
 msgstr ""
 
 #: includes/customizer.php:37
-msgid "Set topnav's default position. Reference: <a href=\"https://getbootstrap.com/docs/5.1/utilities/flex/#justify-content\" target=\"_blank\">Bootstrap</a> and <a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content\" target=\"_blank\">Flexbox in general</a>.  Note: this can be overridden on individual pages."
+msgid "Set topnav's default position. Reference: <a href=\"https://getbootstrap.com/docs/5.1/utilities/flex/#justify-content\" target=\"_blank\">Bootstrap</a> and <a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content\" target=\"_blank\">Flexbox in general</a>."
 msgstr ""
 
 #: includes/customizer.php:46
