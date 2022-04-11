@@ -30,8 +30,8 @@ if ( is_front_page() ) {
 
 						<?php
 						$homepage_slider_posts = new WP_Query(
-							array(
-								'category_name' => 'homepage-slider'
+							array (
+								'category_name' => 'homepage-slider',
 							)
 						);
 						if ( $homepage_slider_posts->have_posts() ) {
@@ -39,9 +39,10 @@ if ( is_front_page() ) {
 							$counter = 1;
 							while ( $homepage_slider_posts->have_posts() ) {
 								$homepage_slider_posts->the_post();
-//							get_template_part( 'loop-templates/content', 'posts' );
-								get_template_part( 'loop-templates/hero', 'homepage-slider-posts', array('counter' =>
-									                                                                         $counter++) );
+								get_template_part( 'loop-templates/hero', 'homepage-slider-posts', array (
+									'counter' =>
+										$counter++,
+								) );
 							}
 							echo '</div></div>';
 						}
