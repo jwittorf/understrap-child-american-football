@@ -94,7 +94,10 @@ function custom_taxonomy_teams_edit_term_fields( $term )
 		</th>
 		<td>
 
-			<?php $image_id = get_term_meta( $term->term_id, 'image_id', true ); ?>
+			<?php
+			// The image basically is just an input for the image (attachment) id.
+			$image_id = get_term_meta( $term->term_id, 'image_id', true );
+			?>
 			<input type="hidden" id="image_id" name="image_id" value="<?php echo $image_id; ?>">
 
 			<div id="image_wrapper">
@@ -104,13 +107,17 @@ function custom_taxonomy_teams_edit_term_fields( $term )
 			</div>
 
 			<p>
-				<input type="button" class="button button-secondary taxonomy_media_button" id="taxonomy_media_button"
-				       name="taxonomy_media_button" value="<?php _e( 'Add Image' ); ?>">
-				<input type="button" class="button button-secondary taxonomy_media_remove" id="taxonomy_media_remove"
+				<input type="button"
+				       class="button button-secondary taxonomy_media_button<?php echo ( $image_id ) ? " hidden"
+					       : "" ?>" id="taxonomy_media_add"
+				       name="taxonomy_media_add" value="<?php _e( 'Add Image' ); ?>">
+				<input type="button" class="button button-secondary taxonomy_media_remove<?php echo ( $image_id ) ? ""
+					: " hidden" ?>"
+				       id="taxonomy_media_remove"
 				       name="taxonomy_media_remove" value="<?php _e( 'Remove Image' ); ?>">
 			</p>
 
-			</div></td>
+		</td>
 	</tr>
 	<?php
 }
@@ -160,46 +167,53 @@ add_action( 'admin_footer', 'add_custom_script' );
 function add_custom_script()
 {
 	?>
-	<script>jQuery(document).ready(function ($) {
-			function taxonomy_media_upload(button_class) {
-				let custom_media = true,
-					original_attachment = wp.media.editor.send.attachment;
-				$('body').on('click', button_class, function (e) {
-					const button_id = '#' + $(this).attr('id');
-					const button = $(button_id);
-					custom_media = true;
-					wp.media.editor.send.attachment = function (props, attachment) {
-						if (custom_media) {
-							$('#image_id').val(attachment.id);
-							$('#image_wrapper').html('<img alt="" class="custom_media_image" src="" style="margin:0;' +
-								'padding:0;max-height:100px;float:none;" />');
-							$('#image_wrapper .custom_media_image').attr('src', attachment.url).css('display', 'block');
-						} else {
-							return original_attachment.apply(button_id, [props, attachment]);
-						}
-					}
-					wp.media.editor.open(button);
-					return false;
-				});
-			}
+	<script>
+		jQuery(function ($) {
+			let mediaFrame;
+			const buttonAdd = $("#taxonomy_media_add"),
+				buttonRemove = $("#taxonomy_media_remove"),
+				imageWrapper = $("#image_wrapper"),
+				imageInput = $("#image_id");
 
-			taxonomy_media_upload('.taxonomy_media_button.button');
-			$('body').on('click', '.taxonomy_media_remove', function () {
-				$('#image_id').val('');
-				$('#image_wrapper').html('<img alt="" class="custom_media_image" src="" style="margin:0;padding:0;' +
-					'max-height:100px;float:none;" />');
-			});
+			buttonAdd.on("click", (e) => {
+				e.preventDefault();
 
-			$(document).ajaxComplete(function (event, xhr, settings) {
-				const queryStringArr = settings.data.split('&');
-				let $response;
-				if ($.inArray('action=add-tag', queryStringArr) !== -1) {
-					const xml = xhr.responseXML;
-					$response = $(xml).find('term_id').text();
-					if ($response !== "") {
-						$('#image_wrapper').html('');
-					}
+				if (mediaFrame) {
+					mediaFrame.open();
+					return;
 				}
+
+				// Prepare the popup.
+				mediaFrame = wp.media({
+					title: 'Select team logo',
+					button: {
+						text: 'Use this logo'
+					},
+					multiple: false
+				});
+
+				// Handle the selection of an image (show preview, hide button).
+				mediaFrame.on("select", () => {
+					const attachment = mediaFrame.state().get('selection').first().toJSON();
+					imageWrapper.html(`<img src="${attachment.url}" alt="" style="max-width: 100px;" />`);
+					imageInput.val(attachment.id);
+					buttonAdd.addClass("hidden");
+					buttonRemove.removeClass("hidden");
+				})
+
+				mediaFrame.open();
 			});
-		});</script> <?php
+
+			// Handle deleting the current image.
+			buttonRemove.on("click", (e) => {
+				e.preventDefault();
+
+				imageWrapper.html('');
+				imageInput.val('');
+				buttonAdd.removeClass("hidden");
+				buttonRemove.addClass("hidden");
+			});
+		});
+	</script>
+	<?php
 }
