@@ -52,10 +52,12 @@ function custom_taxonomy_teams_add_term_fields()
 
 	// Image
 	?>
-	<div class="form-field term-group">
+	<div class="form-field">
 
-		<label for="image_id"><?php _e( 'Image' ); ?></label>
-		<input type="hidden" id="image_id" name="image_id" class="custom_media_url" value="">
+		<label for="custom_taxonomy_teams_image_id"><?php _e( 'Image' ); ?></label>
+		<input type="hidden" id="custom_taxonomy_teams_image_id" name="custom_taxonomy_teams_image_id"
+		       class="custom_media_url"
+		       value="">
 
 		<div id="image_wrapper"></div>
 
@@ -88,30 +90,36 @@ function custom_taxonomy_teams_edit_term_fields( $term )
 	</tr>';
 
 	?>
-	<tr class="form-field term-group-wrap">
+	<tr class="form-field">
 		<th scope="row">
-			<label for="image_id"><?php _e( 'Image' ); ?></label>
+			<label for="custom_taxonomy_teams_image_id"><?php _e( 'Image' ); ?></label>
 		</th>
 		<td>
 
 			<?php
 			// The image basically is just an input for the image (attachment) id.
-			$image_id = get_term_meta( $term->term_id, 'image_id', true );
+			$custom_taxonomy_teams_image_id = get_term_meta( $term->term_id, 'custom_taxonomy_teams_image_id', true );
 			?>
-			<input type="hidden" id="image_id" name="image_id" value="<?php echo $image_id; ?>">
+			<input type="hidden" id="custom_taxonomy_teams_image_id" name="custom_taxonomy_teams_image_id" value="<?php
+			echo
+			$custom_taxonomy_teams_image_id; ?>">
 
 			<div id="image_wrapper">
-				<?php if ( $image_id ) { ?>
-					<?php echo wp_get_attachment_image( $image_id ); ?>
+				<?php if ( $custom_taxonomy_teams_image_id ) { ?>
+					<?php echo wp_get_attachment_image( $custom_taxonomy_teams_image_id ); ?>
 				<?php } ?>
 			</div>
 
 			<p>
 				<input type="button"
-				       class="button button-secondary taxonomy_media_button<?php echo ( $image_id ) ? " hidden"
+				       class="button button-secondary taxonomy_media_button<?php echo ( $custom_taxonomy_teams_image_id
+				       ) ?
+					       " hidden"
 					       : "" ?>" id="taxonomy_media_add"
 				       name="taxonomy_media_add" value="<?php _e( 'Add Image' ); ?>">
-				<input type="button" class="button button-secondary taxonomy_media_remove<?php echo ( $image_id ) ? ""
+				<input type="button" class="button button-secondary taxonomy_media_remove<?php echo (
+				$custom_taxonomy_teams_image_id )
+					? ""
 					: " hidden" ?>"
 				       id="taxonomy_media_remove"
 				       name="taxonomy_media_remove" value="<?php _e( 'Remove Image' ); ?>">
@@ -139,8 +147,13 @@ function custom_taxonomy_teams_save_term_fields( $term_id )
 add_action( 'created_teams', 'custom_taxonomy_teams_save_term_images' );
 function custom_taxonomy_teams_save_term_images( $term_id )
 {
-	if ( isset( $_POST[ 'image_id' ] ) && '' !== $_POST[ 'image_id' ] ) {
-		add_term_meta( $term_id, 'teams_image_id', $_POST[ 'image_id' ], true );
+	if ( isset( $_POST[ 'custom_taxonomy_teams_image_id' ] ) && '' !== $_POST[ 'custom_taxonomy_teams_image_id' ] ) {
+		add_term_meta(
+			$term_id,
+			'teams_custom_taxonomy_teams_image_id',
+			$_POST[ 'custom_taxonomy_teams_image_id' ],
+			true
+		);
 	}
 }
 
@@ -148,12 +161,12 @@ function custom_taxonomy_teams_save_term_images( $term_id )
 add_action( 'edited_teams', 'custom_taxonomy_teams_update_term_images' );
 function custom_taxonomy_teams_update_term_images( $term_id )
 {
-	if ( isset( $_POST[ 'image_id' ] ) && '' !== $_POST[ 'image_id' ] ) {
-		$image = $_POST[ 'image_id' ];
-		update_term_meta( $term_id, 'image_id', $image );
+	if ( isset( $_POST[ 'custom_taxonomy_teams_image_id' ] ) && '' !== $_POST[ 'custom_taxonomy_teams_image_id' ] ) {
+		$image = $_POST[ 'custom_taxonomy_teams_image_id' ];
+		update_term_meta( $term_id, 'custom_taxonomy_teams_image_id', $image );
 	} else {
 		// TODO: make this nicer/cleaner, maybe just unset/remove the meta value?
-		update_term_meta( $term_id, 'image_id', '' );
+		update_term_meta( $term_id, 'custom_taxonomy_teams_image_id', '' );
 	}
 }
 
@@ -173,7 +186,7 @@ function add_custom_script()
 			const buttonAdd = $("#taxonomy_media_add"),
 				buttonRemove = $("#taxonomy_media_remove"),
 				imageWrapper = $("#image_wrapper"),
-				imageInput = $("#image_id");
+				imageInput = $("#custom_taxonomy_teams_image_id");
 
 			buttonAdd.on("click", (e) => {
 				e.preventDefault();
