@@ -1,9 +1,14 @@
 <?php
 
+if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+	return;
+}
+
 function custom_post_games()
 {
 
 	// Set UI labels for Custom Post Type
+	// https://salferrarello.com/wordpress-__-vs-_x-functions/
 	$labels = array (
 		'name'               => _x( 'Games', 'Post Type General Name', 'understrap_child' ),
 		'singular_name'      => _x( 'Game', 'Post Type Singular Name', 'understrap_child' ),
@@ -67,3 +72,113 @@ function custom_post_games()
 * unnecessarily executed.
 */
 add_action( 'init', 'custom_post_games', 0 );
+
+function generate_select_team( $name, $selected = '' )
+{
+	$html = wp_nonce_field(
+		'custom-post-games-print-meta-box-team-' . $name . '-save',
+		'custom-post-games-print-meta-box-team-' . $name . '-nonce'
+	);
+	$teams = get_terms( array (
+		'taxonomy'   => 'teams',
+		'hide_empty' => false,
+	) );
+
+	// Select the team.
+	$html .= "<select name=\"custom_post_games_team_" . $name . "\" id=\"custom_post_games_team_" . $name . "\">";
+	foreach ( $teams as $team ) {
+		$html .= "<option " . selected(
+				get_post_meta( get_the_ID(), "custom_post_games_team_$name", true ),
+				esc_attr( $team->slug ),
+				false
+			) .
+			" value=\"" .
+			esc_attr(
+				$team->slug
+			) . "\">" .
+			sanitize_text_field(
+				$team->name
+			) .
+			"</option>";
+	}
+	$html .= "</select>";
+
+	// Enter the score.
+	$html .= "<input type=\"number\" value=\"\">";
+	return $html;
+}
+
+function custom_post_games_print_meta_box_team_home()
+{
+	echo generate_select_team( "home" );
+}
+
+function custom_post_games_print_meta_box_team_away()
+{
+	echo generate_select_team( "away" );
+}
+
+function custom_post_games_add_meta_boxes()
+{
+	add_meta_box(
+		'custom-post-games-print-meta-box-team-home',
+		esc_html__( 'Home team' ),
+		'custom_post_games_print_meta_box_team_home',
+		'games'
+	);
+
+	add_meta_box(
+		'custom-post-games-print-meta-box-team-away',
+		esc_html__( 'Away team' ),
+		'custom_post_games_print_meta_box_team_away',
+		'games'
+	);
+}
+
+add_action( 'add_meta_boxes', 'custom_post_games_add_meta_boxes' );
+
+
+function custom_post_games_save_meta_boxes()
+{
+	if (
+		( !isset( $_POST[ 'custom-post-games-print-meta-box-team-home-nonce' ] ) &&
+			!wp_verify_nonce( $_POST[ 'custom-post-games-print-meta-box-team-home-nonce' ] ) ) &&
+		(
+			!isset( $_POST[ 'custom-post-games-print-meta-box-team-away-nonce' ] ) &&
+			!wp_verify_nonce( $_POST[ 'custom-post-games-print-meta-box-team-away-nonce' ] )
+		)
+	) {
+		return;
+	}
+
+	$game_id = get_the_ID();
+	custom_post_games_update_or_delete_value( $game_id, 'custom_post_games_team_home' );
+	custom_post_games_update_or_delete_value( $game_id, 'custom_post_games_team_away' );
+
+}
+
+/**
+ * @param $game_id
+ * @param string $key
+ * @return void
+ */
+function custom_post_games_update_or_delete_value( $game_id, string $key = '' ): void
+{
+	if (
+		!isset( $_POST[ $key ] ) && get_post_meta(
+			$game_id,
+			$key,
+			true
+		)
+	) {
+		delete_post_meta( $game_id, $key );
+	} else {
+		update_post_meta(
+			$game_id,
+			$key,
+			sanitize_text_field( $_POST[ $key ] )
+		);
+	}
+}
+
+add_action( 'save_post_games', 'custom_post_games_save_meta_boxes' );
