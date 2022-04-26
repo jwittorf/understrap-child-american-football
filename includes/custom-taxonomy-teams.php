@@ -62,9 +62,9 @@ function custom_taxonomy_teams_add_term_fields()
 		<div id="image_wrapper"></div>
 
 		<p>
-			<input type="button" class="button button-secondary taxonomy_media_button" id="taxonomy_media_button"
-			       name="taxonomy_media_button" value="<?php _e( 'Add Image' ); ?>">
-			<input type="button" class="button button-secondary taxonomy_media_remove" id="taxonomy_media_remove"
+			<input type="button" class="button button-secondary" id="taxonomy_media_add"
+			       name="taxonomy_media_add" value="<?php _e( 'Add Image' ); ?>">
+			<input type="button" class="button button-secondary" id="taxonomy_media_remove"
 			       name="taxonomy_media_remove" value="<?php _e( 'Remove Image' ); ?>">
 		</p>
 
@@ -112,15 +112,11 @@ function custom_taxonomy_teams_edit_term_fields( $term )
 
 			<p>
 				<input type="button"
-				       class="button button-secondary taxonomy_media_button<?php echo ( $custom_taxonomy_teams_image_id
-				       ) ?
-					       " hidden"
-					       : "" ?>" id="taxonomy_media_add"
+				       class="button button-secondary<?php echo ( $custom_taxonomy_teams_image_id ) ? " hidden" : "" ?>"
+				       id="taxonomy_media_add"
 				       name="taxonomy_media_add" value="<?php _e( 'Add Image' ); ?>">
-				<input type="button" class="button button-secondary taxonomy_media_remove<?php echo (
-				$custom_taxonomy_teams_image_id )
-					? ""
-					: " hidden" ?>"
+				<input type="button"
+				       class="button button-secondary<?php echo ( $custom_taxonomy_teams_image_id ) ? "" : " hidden" ?>"
 				       id="taxonomy_media_remove"
 				       name="taxonomy_media_remove" value="<?php _e( 'Remove Image' ); ?>">
 			</p>
