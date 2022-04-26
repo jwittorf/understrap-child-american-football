@@ -1,20 +1,20 @@
 <?php
 
-if ( !function_exists( 'understrap_child_theme_customize_register' ) ) {
+if ( !function_exists( 'understrap_child_customize_register' ) ) {
 	/**
 	 * Register individual settings through customizer's API.
 	 *
 	 * @param WP_Customize_Manager $wp_customize Customizer reference.
 	 */
-	function understrap_child_theme_customize_register( $wp_customize )
+	function understrap_child_customize_register( $wp_customize )
 	{
 		$wp_customize->add_section(
-			'understrap_child_theme_layout_options',
+			'understrap_child_layout_options',
 			array (
 				'title'       => __( 'Theme Layout Settings', 'understrap_child' ),
 				'capability'  => 'edit_theme_options',
 				'description' => __( 'General theme settings', 'understrap_child' ),
-				'priority'    => apply_filters( 'understrap_child_theme_layout_options_priority', 160 ),
+				'priority'    => apply_filters( 'understrap_child_layout_options_priority', 160 ),
 			)
 		);
 
@@ -38,7 +38,7 @@ if ( !function_exists( 'understrap_child_theme_customize_register' ) ) {
 						'Set topnav\'s default position. Reference: <a href="https://getbootstrap.com/docs/5.1/utilities/flex/#justify-content" target="_blank">Bootstrap</a> and <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content" target="_blank">Flexbox in general</a>.',
 						'understrap_child'
 					),
-					'section'           => 'understrap_child_theme_layout_options',
+					'section'           => 'understrap_child_layout_options',
 					'settings'          => 'understrap_child_topnav_position',
 					'type'              => 'select',
 					'sanitize_callback' => 'understrap_theme_slug_sanitize_select', // provided by parent theme
@@ -57,5 +57,5 @@ if ( !function_exists( 'understrap_child_theme_customize_register' ) ) {
 			)
 		);
 	}
-} // End of if function_exists( 'understrap_child_theme_customize_register' ).
-add_action( 'customize_register', 'understrap_child_theme_customize_register' );
+} // End of if function_exists( 'understrap_child_customize_register' ).
+add_action( 'customize_register', 'understrap_child_customize_register' );
