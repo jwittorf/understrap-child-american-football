@@ -41,7 +41,8 @@ if ( !function_exists( 'understrap_child_theme_customize_register' ) ) {
 					'section'           => 'understrap_child_theme_layout_options',
 					'settings'          => 'understrap_child_topnav_position',
 					'type'              => 'select',
-					'sanitize_callback' => 'understrap_child_theme_slug_sanitize_select',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select', // provided by parent theme
+					// choices are use by understrap_theme_slug_sanitize_select()
 					'choices'           => array (
 						'justify-content-start'   => __( 'Left topnav', 'understrap_child' ),
 						'justify-content-end'     => __( 'Right topnav', 'understrap_child' ),
