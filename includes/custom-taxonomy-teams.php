@@ -36,3 +36,55 @@ function custom_taxonomy_teams()
 
 // hook into the init action and call custom_taxonomy_teams when it fires
 add_action( 'init', 'custom_taxonomy_teams', 0 );
+
+
+// Add additional fields to the created custom taxonomy.
+add_action( 'teams_add_form_fields', 'custom_taxonomy_teams_add_term_fields' );
+function custom_taxonomy_teams_add_term_fields()
+{
+
+	// URL
+	echo '<div class="form-field">
+	<label for="custom_taxonomy_teams-url">' . __( 'URL' ) . '</label>
+	<input type="url" name="custom_taxonomy_teams-url" id="custom_taxonomy_teams-url" />
+	<p>' . __( 'Website of the team, starting with http:// or https://' ) . '</p>
+	</div>';
+
+	// TODO: Image
+
+}
+
+
+add_action( 'teams_edit_form_fields', 'custom_taxonomy_teams_edit_term_fields' );
+function custom_taxonomy_teams_edit_term_fields( $term )
+{
+
+	$value = get_term_meta( $term->term_id, 'custom_taxonomy_teams-url', true );
+
+	echo '<tr class="form-field">
+	<th>
+		<label for="custom_taxonomy_teams-url">' . __( 'URL' ) . '</label>
+	</th>
+	<td>
+		<input name="custom_taxonomy_teams-url" id="custom_taxonomy_teams-url" type="url" title="' .
+		__( 'Full URL starting with http:// or https://' ) . '" value="' .
+		esc_url_raw( $value, array ( 'http', 'https' ) ) . '" />
+		<p class="description">' . __( 'Website of the team, starting with http:// or https://' ) . '</p>
+	</td>
+	</tr>';
+
+}
+
+
+add_action( 'created_teams', 'custom_taxonomy_teams_save_term_fields' );
+add_action( 'edited_teams', 'custom_taxonomy_teams_save_term_fields' );
+function custom_taxonomy_teams_save_term_fields( $term_id )
+{
+
+	update_term_meta(
+		$term_id,
+		'custom_taxonomy_teams-url',
+		sanitize_text_field( $_POST[ 'custom_taxonomy_teams-url' ] )
+	);
+
+}
