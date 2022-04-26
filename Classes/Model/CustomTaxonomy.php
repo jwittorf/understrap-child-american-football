@@ -1,6 +1,6 @@
 <?php
 
-namespace UnderstrapChild\AmericanFootball\Model;
+namespace UnderstrapChild\Model;
 
 class CustomTaxonomy {
 

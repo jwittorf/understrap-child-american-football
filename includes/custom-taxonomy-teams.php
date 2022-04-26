@@ -1,10 +1,13 @@
 <?php
 
+use UnderstrapChild\View\Input;
+use UnderstrapChild\Model\CustomTaxonomy;
+
 // Create a custom taxonomy, to organize football related content for each team.
 
 // hook into the init action and call custom_taxonomy_teams when it fires
 add_action( 'init', function() {
-	$taxonomy = new \UnderstrapChild\Model\Custom_Taxonomy( "Team", "Teams" );
+	$taxonomy = new CustomTaxonomy( "Team", "Teams" );
 	$taxonomy->register( array ( "games" ) );
 }, 0 );
 
@@ -51,23 +54,22 @@ function custom_taxonomy_teams_add_term_fields()
 }
 
 add_action( 'teams_edit_form_fields', function($term){
-
-	$url_field = new UnderstrapChild\View\Input(
+	$url_field = new Input(
 		$term,
 		'custom_taxonomy_teams',
 		__( 'URL' ),
 		__( 'Full URL starting with http:// or https://' ),
 		"url"
 	);
-	$url_field->render();
+	echo $url_field->render();
 
-	$homefield_address_field = new UnderstrapChild\View\Input(
+	$homefield_address_field = new Input(
 		$term,
 		'custom_taxonomy_teams',
 		__( 'Home field address' ),
-		__( 'Full address of home field, including: street, number, ZIP and city' ),
+		__( 'Full address of home field, including: street, number, ZIP and city' )
 	);
-	$homefield_address_field->render();
+	echo $homefield_address_field->render();
 
 	?>
 	<tr class="form-field">
@@ -120,8 +122,8 @@ function custom_taxonomy_teams_save_term_fields( $term_id )
 
 	update_term_meta(
 		$term_id,
-		'custom_taxonomy_teams-homefield_address',
-		sanitize_text_field( $_POST[ 'custom_taxonomy_teams-homefield_address' ] )
+		'custom_taxonomy_teams-homefieldaddress',
+		sanitize_text_field( $_POST[ 'custom_taxonomy_teams-homefieldaddress' ] )
 	);
 
 }

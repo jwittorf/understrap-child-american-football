@@ -19,7 +19,7 @@ abstract class AbstractField
 	 * @param $title
 	 * @param $type
 	 */
-	public function __construct( $term, $prefix, $label, $title, $type = "text")
+	public function __construct( $term, $prefix, $label, $title, $type = "text" )
 	{
 		$this->term = $term;
 		$this->prefix = $prefix;
@@ -27,8 +27,6 @@ abstract class AbstractField
 		$this->type = $type;
 		$this->title = $title;
 		$this->id = $this->prefix . '-' . sanitize_key( $this->label );
-
-		$this->value = get_term_meta( $term->term_id, $this->id, true );
+		$this->value = get_term_meta( $this->term->term_id, $this->id, true );
 	}
-
 }

@@ -8,7 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-
+// Load composer
+require 'vendor/autoload.php';
 
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
