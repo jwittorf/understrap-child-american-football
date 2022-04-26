@@ -64,7 +64,7 @@ function custom_taxonomy_teams_add_term_fields()
 		<p>
 			<input type="button" class="button button-secondary" id="taxonomy_media_add"
 			       name="taxonomy_media_add" value="<?php _e( 'Add Image' ); ?>">
-			<input type="button" class="button button-secondary" id="taxonomy_media_remove"
+			<input type="button" class="button button-secondary hidden" id="taxonomy_media_remove"
 			       name="taxonomy_media_remove" value="<?php _e( 'Remove Image' ); ?>">
 		</p>
 
