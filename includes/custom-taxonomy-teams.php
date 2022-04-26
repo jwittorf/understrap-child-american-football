@@ -50,6 +50,13 @@ function custom_taxonomy_teams_add_term_fields()
 	<p>' . __( 'Website of the team, starting with http:// or https://' ) . '</p>
 	</div>';
 
+	// Home field address
+	echo '<div class="form-field">
+	<label for="custom_taxonomy_teams-homefield_address">' . __( 'Home field address' ) . '</label>
+	<input type="text" name="custom_taxonomy_teams-homefield_address" id="custom_taxonomy_teams-homefield_address" />
+	<p>' . __( 'Full address of home field, including: street, number, ZIP and city' ) . '</p>
+	</div>';
+
 	// Image
 	?>
 	<div class="form-field">
@@ -86,6 +93,19 @@ function custom_taxonomy_teams_edit_term_fields( $term )
 		__( 'Full URL starting with http:// or https://' ) . '" value="' .
 		esc_url_raw( $value_url, array ( 'http', 'https' ) ) . '" />
 		<p class="description">' . __( 'Website of the team, starting with http:// or https://' ) . '</p>
+	</td>
+	</tr>';
+
+	$value_homefield_address = get_term_meta( $term->term_id, 'custom_taxonomy_teams-homefield_address', true );
+	echo '<tr class="form-field">
+	<th>
+		<label for="custom_taxonomy_teams-homefield_address">' . __( 'Home field address' ) . '</label>
+	</th>
+	<td>
+		<input name="custom_taxonomy_teams-homefield_address" id="custom_taxonomy_teams-homefield_address" type="text" title="' .
+		__( 'Full address of home field, including: street, number, ZIP and city' ) . '" value="' .
+		esc_attr( $value_homefield_address ) . '" />
+		<p class="description">' . __( 'Full address of home field, including: street, number, ZIP and city' ) . '</p>
 	</td>
 	</tr>';
 
@@ -136,6 +156,12 @@ function custom_taxonomy_teams_save_term_fields( $term_id )
 		$term_id,
 		'custom_taxonomy_teams-url',
 		sanitize_text_field( $_POST[ 'custom_taxonomy_teams-url' ] )
+	);
+
+	update_term_meta(
+		$term_id,
+		'custom_taxonomy_teams-homefield_address',
+		sanitize_text_field( $_POST[ 'custom_taxonomy_teams-homefield_address' ] )
 	);
 
 }
