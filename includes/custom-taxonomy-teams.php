@@ -6,10 +6,6 @@ use UnderstrapChild\Model\CustomTaxonomy;
 // Create a custom taxonomy, to organize football related content for each team.
 
 // hook into the init action and call custom_taxonomy_teams when it fires
-add_action( 'init', function() {
-	$taxonomy = new CustomTaxonomy( "Team", "Teams" );
-	$taxonomy->register( array ( "games" ) );
-}, 0 );
 
 
 // Add additional fields to the created custom taxonomy.
@@ -18,18 +14,8 @@ function custom_taxonomy_teams_add_term_fields()
 {
 
 	// URL
-	echo '<div class="form-field">
-	<label for="custom_taxonomy_teams-url">' . __( 'URL' ) . '</label>
-	<input type="url" name="custom_taxonomy_teams-url" id="custom_taxonomy_teams-url" />
-	<p>' . __( 'Website of the team, starting with http:// or https://' ) . '</p>
-	</div>';
 
 	// Home field address
-	echo '<div class="form-field">
-	<label for="custom_taxonomy_teams-homefield_address">' . __( 'Home field address' ) . '</label>
-	<input type="text" name="custom_taxonomy_teams-homefield_address" id="custom_taxonomy_teams-homefield_address" />
-	<p>' . __( 'Full address of home field, including: street, number, ZIP and city' ) . '</p>
-	</div>';
 
 	// Image
 	?>

@@ -8,9 +8,6 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-// Load composer
-require 'vendor/autoload.php';
-
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
  */
@@ -117,9 +114,9 @@ $understrap_includes = array(
 //	'/pagination.php',                      // Custom pagination for this theme.
 //	'/hooks.php',                           // Custom hooks.
 //	'/extras.php',                          // Custom functions that act independently of the theme templates.
-	'/customizer.php',                      // Customizer additions.
-	'/custom-taxonomy-teams.php',           // Custom taxonomy type for teams.
-	'/custom-post-games.php',               // Custom post type for games.
+//	'/customizer.php',                      // Customizer additions.
+//	'/custom-taxonomy-teams.php',           // Custom taxonomy type for teams.
+//	'/custom-post-games.php',               // Custom post type for games.
 //	'/custom-comments.php',                 // Custom Comments file.
 //	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/understrap/understrap/issues/567.
 //	'/editor.php',                          // Load Editor functions.
@@ -129,5 +126,21 @@ $understrap_includes = array(
 
 // Include files.
 foreach ( $understrap_includes as $file ) {
-	require_once get_theme_file_path( $understrap_inc_dir . $file );
+//	require_once get_theme_file_path( $understrap_inc_dir . $file );
 }
+
+
+//\UnderstrapChild\Controller\BaseController::getInstance();
+
+// Load composer
+if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
+	require_once dirname( __FILE__ ) . '/vendor/autoload.php';
+}
+
+// TODO: Add basic Class and create instance to setup additional functionality
+use UnderstrapChild\CustomTaxonomy\CustomTaxonomy;
+
+$teamsTaxonomy = new CustomTaxonomy( "Team", "Teams", array ( "post" ) );
+$teamsTaxonomy->addData( "URL", "Website of the team, starting with http:// or https://", "url" );
+$teamsTaxonomy->addData( "Home field address", "Full address of home field, including: street, number, ZIP and city" );
+$teamsTaxonomy->addActionTermFormFields();

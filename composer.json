@@ -13,7 +13,7 @@
   "homepage": "https://github.com/holger1411/understrap-child",
   "autoload": {
     "psr-4": {
-      "UnderstrapChild\\": "Classes"
+      "UnderstrapChild\\": "./Classes/"
     }
   }
 }
