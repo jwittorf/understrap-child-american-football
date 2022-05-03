@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @package UnderstrapChild
+ */
 namespace UnderstrapChild\View;
 
 class Input extends AbstractField

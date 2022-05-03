@@ -40,7 +40,8 @@ function custom_taxonomy_teams_add_term_fields()
 }
 
 add_action( 'teams_edit_form_fields', function($term){
-	$url_field = new Input(
+
+/*	$url_field = new Input(
 		$term,
 		'custom_taxonomy_teams',
 		__( 'URL' ),
@@ -55,7 +56,7 @@ add_action( 'teams_edit_form_fields', function($term){
 		__( 'Home field address' ),
 		__( 'Full address of home field, including: street, number, ZIP and city' )
 	);
-	echo $homefield_address_field->render();
+	echo $homefield_address_field->render();*/
 
 	?>
 	<tr class="form-field">

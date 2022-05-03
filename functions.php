@@ -144,3 +144,4 @@ $teamsTaxonomy = new CustomTaxonomy( "Team", "Teams", array ( "post" ) );
 $teamsTaxonomy->addData( "URL", "Website of the team, starting with http:// or https://", "url" );
 $teamsTaxonomy->addData( "Home field address", "Full address of home field, including: street, number, ZIP and city" );
 $teamsTaxonomy->addActionTermFormFields();
+$teamsTaxonomy->addActionEditFormFields();

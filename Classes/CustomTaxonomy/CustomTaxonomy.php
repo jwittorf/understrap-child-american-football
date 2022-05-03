@@ -13,6 +13,7 @@ class CustomTaxonomy
 
 	protected string $singular = 'Singular';
 	protected string $plural = 'Plural';
+	protected string $prefix = 'custom_taxonomy';
 	protected array $post_object_types = [];
 	protected array $data = [];
 
@@ -25,6 +26,7 @@ class CustomTaxonomy
 	{
 		$this->singular = $singular;
 		$this->plural = $plural;
+		$this->prefix = strtolower( $this->plural );
 		$this->post_object_types = $post_object_types;
 		add_action( 'init', array ( $this, 'register', ), 0 );
 	}
@@ -37,7 +39,7 @@ class CustomTaxonomy
 
 	public function addActionTermFormFields()
 	{
-		add_action( strtolower( $this->plural ) . '_add_form_fields', array ( $this, 'renderTermFormFields' ) );
+		add_action( $this->prefix . '_add_form_fields', array ( $this, 'renderTermFormFields' ) );
 	}
 
 	public function renderTermFormFields()
@@ -45,6 +47,21 @@ class CustomTaxonomy
 		foreach($this->data as $field) {
 			$field->render();
 		}
+	}
+
+	public function addActionEditFormFields()
+	{
+		add_action( $this->prefix . '_edit_form_fields', array ( $this, 'renderEditFormFields' ) );
+	}
+
+	public function renderEditFormFields($term)
+	{
+		$html = '';
+		foreach($this->data as $field) {
+			$input = new Input($term, $this->prefix, $field->getLabel(), $field->getDescription());
+			$html .= $input->render();
+		}
+		echo $html;
 	}
 
 	public function register()
