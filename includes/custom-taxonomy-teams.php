@@ -1,12 +1,16 @@
 <?php
 
+use UnderstrapChild\CustomTaxonomy\Team;
 use UnderstrapChild\View\Input;
-use UnderstrapChild\Model\CustomTaxonomy;
 
 // Create a custom taxonomy, to organize football related content for each team.
 
 // hook into the init action and call custom_taxonomy_teams when it fires
 
+
+//$team = new Team();
+//$team->
+//$team->
 
 // Add additional fields to the created custom taxonomy.
 add_action( 'teams_add_form_fields', 'custom_taxonomy_teams_add_term_fields' );

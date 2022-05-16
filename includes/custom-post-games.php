@@ -104,6 +104,11 @@ function generate_select_team( $name, $selected = '' )
 	$html .= "</select>";
 
 	// Enter the score.
+	// TODO: define int field etc.
+	/*$html .= wp_nonce_field(
+		'custom-post-games-print-meta-box-team-' . $name . '-save',
+		'custom-post-games-print-meta-box-team-' . $name . '-nonce'
+	);*/
 	$html .= "<input type=\"number\" value=\"\">";
 	return $html;
 }

@@ -6,16 +6,16 @@
 
 namespace UnderstrapChild\CustomTaxonomy;
 
-use UnderstrapChild\View\Input;
-
 class CustomTaxonomy
 {
 
 	protected string $singular = 'Singular';
 	protected string $plural = 'Plural';
 	protected string $prefix = 'custom_taxonomy';
+	protected string $id = 'custom_taxonomy_plural';
 	protected array $post_object_types = [];
 	protected array $data = [];
+	protected string $slug;
 
 	/**
 	 * @param $singular
@@ -25,15 +25,17 @@ class CustomTaxonomy
 	public function __construct( $singular, $plural, array $post_object_types = [] )
 	{
 		$this->singular = $singular;
+		$this->slug = sanitize_title( $this->singular );
 		$this->plural = $plural;
-		$this->prefix = strtolower( $this->plural );
+		$this->prefix = sanitize_title( $this->plural );
+		$this->id = 'custom_taxonomy_' . $this->prefix;
 		$this->post_object_types = $post_object_types;
 		add_action( 'init', array ( $this, 'register', ), 0 );
 	}
 
 	public function addData( $label, $description, $type = 'text' )
 	{
-		$field = new AbstractField( $label, $description, $type );
+		$field = new Field( $label, $description, $this->id, $type );
 		$this->data[] = $field;
 	}
 
@@ -44,9 +46,11 @@ class CustomTaxonomy
 
 	public function renderTermFormFields()
 	{
-		foreach($this->data as $field) {
-			$field->render();
+		$html = '';
+		foreach ( $this->data as $field ) {
+			$html .= $field->render();
 		}
+		echo $html;
 	}
 
 	public function addActionEditFormFields()
@@ -54,12 +58,15 @@ class CustomTaxonomy
 		add_action( $this->prefix . '_edit_form_fields', array ( $this, 'renderEditFormFields' ) );
 	}
 
-	public function renderEditFormFields($term)
+	public function renderEditFormFields( $term )
 	{
 		$html = '';
-		foreach($this->data as $field) {
-			$input = new Input($term, $this->prefix, $field->getLabel(), $field->getDescription());
-			$html .= $input->render();
+		echo "<pre>";
+		var_dump($this->data);
+		echo "</pre>";
+		foreach ( $this->data as $field ) {
+			$field->addTerm($term);
+			$html .= $field->renderEdit();
 		}
 		echo $html;
 	}
