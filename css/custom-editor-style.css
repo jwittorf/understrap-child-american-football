@@ -170,11 +170,11 @@ sup {
 }
 
 a {
-  color: #1D7339;
+  color: #006951;
   text-decoration: underline;
 }
 a:hover {
-  color: #175c2e;
+  color: #005441;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -218,7 +218,7 @@ kbd {
   padding: 0.2rem 0.4rem;
   font-size: 0.875em;
   color: #fff;
-  background-color: #212529;
+  background-color: #0a1813;
   border-radius: 0.2rem;
 }
 kbd kbd {
@@ -444,26 +444,26 @@ progress {
   --bs-gray-600: #6c757d;
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
-  --bs-gray-900: #212529;
-  --bs-primary: #1D7339;
-  --bs-secondary: #6c757d;
+  --bs-gray-900: #0a1813;
+  --bs-primary: #006951;
+  --bs-secondary: #ed7921;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
-  --bs-primary-rgb: 29, 115, 57;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-dark: #0a1813;
+  --bs-primary-rgb: 0, 105, 81;
+  --bs-secondary-rgb: 237, 121, 33;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 33, 37, 41;
+  --bs-dark-rgb: 10, 24, 19;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-color-rgb: 10, 24, 19;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -472,22 +472,22 @@ progress {
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  --bs-body-color: #0a1813;
   --bs-body-bg: #fff;
 }
 
 .table, .wp-block-table table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #212529;
+  --bs-table-striped-color: #0a1813;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: #212529;
+  --bs-table-active-color: #0a1813;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: #212529;
+  --bs-table-hover-color: #0a1813;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529;
+  color: #0a1813;
   vertical-align: top;
   border-color: #dee2e6;
 }
@@ -542,27 +542,27 @@ progress {
 }
 
 .table-primary {
-  --bs-table-bg: #d2e3d7;
-  --bs-table-striped-bg: #c8d8cc;
+  --bs-table-bg: #cce1dc;
+  --bs-table-striped-bg: #c2d6d1;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #bdccc2;
+  --bs-table-active-bg: #b8cbc6;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #c2d2c7;
+  --bs-table-hover-bg: #bdd0cc;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #bdccc2;
+  border-color: #b8cbc6;
 }
 
 .table-secondary {
-  --bs-table-bg: #e2e3e5;
-  --bs-table-striped-bg: #d7d8da;
+  --bs-table-bg: #fbe4d3;
+  --bs-table-striped-bg: #eed9c8;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #cbccce;
+  --bs-table-active-bg: #e2cdbe;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #d1d2d4;
+  --bs-table-hover-bg: #e8d3c3;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #cbccce;
+  border-color: #e2cdbe;
 }
 
 .table-success {
@@ -626,15 +626,15 @@ progress {
 }
 
 .table-dark {
-  --bs-table-bg: #212529;
-  --bs-table-striped-bg: #2c3034;
+  --bs-table-bg: #0a1813;
+  --bs-table-striped-bg: #16241f;
   --bs-table-striped-color: #fff;
-  --bs-table-active-bg: #373b3e;
+  --bs-table-active-bg: #232f2b;
   --bs-table-active-color: #fff;
-  --bs-table-hover-bg: #323539;
+  --bs-table-hover-bg: #1c2925;
   --bs-table-hover-color: #fff;
   color: #fff;
-  border-color: #373b3e;
+  border-color: #232f2b;
 }
 
 .table-responsive {
@@ -943,22 +943,22 @@ progress {
 
 .has-primary-color,
 .has-primary-color:visited {
-  color: #1D7339;
+  color: #006951;
 }
 
 .has-primary-background-color {
-  background-color: #1D7339;
-  border-color: #1D7339;
+  background-color: #006951;
+  border-color: #006951;
 }
 
 .has-secondary-color,
 .has-secondary-color:visited {
-  color: #6c757d;
+  color: #ed7921;
 }
 
 .has-secondary-background-color {
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #ed7921;
+  border-color: #ed7921;
 }
 
 .has-success-color,
@@ -1013,12 +1013,12 @@ progress {
 
 .has-dark-color,
 .has-dark-color:visited {
-  color: #212529;
+  color: #0a1813;
 }
 
 .has-dark-background-color {
-  background-color: #212529;
-  border-color: #212529;
+  background-color: #0a1813;
+  border-color: #0a1813;
 }
 
 figure.wp-block-image {
