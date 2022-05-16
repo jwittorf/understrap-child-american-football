@@ -21,19 +21,45 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<div class="col-md-12">
+			<div class="col-md-3" id="wrapper-footer-side">
+				<h3>Waiting for sidebar <code>footer_side</code></h3>
+				<?php if ( is_active_sidebar( 'footer_side' ) ) : ?>
+					<?php dynamic_sidebar( 'footer_side' ); ?>
+				<?php endif; ?>
+			</div><!-- wrapper-footer-side end -->
+			<div class="col-md-9" id="wrapper-footer-main">
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Waiting for sidebar <code>footer_main_top</code></h3>
+						<?php if ( is_active_sidebar( 'footer_main_top' ) ) : ?>
+							<?php dynamic_sidebar( 'footer_main_top' ); ?>
+						<?php endif; ?>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8">
+						<h3>Waiting for sidebar <code>footer_main_bottom_main</code></h3>
+						<?php if ( is_active_sidebar( 'footer_main_bottom_main' ) ) : ?>
+							<?php dynamic_sidebar( 'footer_main_bottom_main' ); ?>
+						<?php endif; ?>
+					</div>
+					<div class="col-md-4">
+						<h3>Waiting for sidebar <code>footer_main_bottom_side</code></h3>
+						<?php if ( is_active_sidebar( 'footer_main_bottom_side' ) ) : ?>
+							<?php dynamic_sidebar( 'footer_main_bottom_side' ); ?>
+						<?php endif; ?>
+						<footer class="site-footer" id="colophon">
 
-				<footer class="site-footer" id="colophon">
+							<div class="site-info">
 
-					<div class="site-info">
+								<?php understrap_site_info(); ?>
 
-						<?php understrap_site_info(); ?>
+							</div><!-- .site-info -->
 
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
+						</footer><!-- #colophon -->
+					</div>
+				</div>
+			</div><!-- wrapper-footer-main end -->
 
 		</div><!-- row end -->
 
