@@ -13,15 +13,15 @@
     "js-compile": "rollup --config src/build/rollup.config.js --sourcemap",
     "js-minify": "terser --config-file src/build/terser.config.json --output js/child-theme.min.js js/child-theme.js",
     "watch": "npm-run-all --parallel watch-run-*",
-    "watch-lr": "npm-run-all --parallel lr watch-run-asset-*",
+    "watch-lr": "npm-run-all --parallel lr watch-run-asset-css",
     "watch-bs": "npm-run-all --parallel bs watch-run-*",
-    "watch-run-asset-css": "nodemon --watch src/sass/ --ext scss --exec \"npm-run-all css\"",
+    "watch-run-asset-css": "nodemon --watch src/sass/ --ext scss --exec \"npm run css-compile\"",
     "watch-run-asset-js": "nodemon --watch src/js/ --ext js --exec \"npm-run-all js\"",
     "copy-assets": "node src/build/copy-assets.js",
     "dist": "npm-run-all --parallel css js",
     "dist-build": "node src/build/dist-build.js",
     "dist-clean": "node src/build/dist-clean.js",
-    "lr": "livereload -d -e 'css' -x '\\.json,\\.scss,\\.map,\\.min.css' -f 'child-theme.css' css/"
+    "lr": "livereload -e 'css' -x '\\.json,\\.scss,\\.map,\\.min.css' -f 'child-theme.css' css/"
   },
   "engines": {
     "node": ">=14"
