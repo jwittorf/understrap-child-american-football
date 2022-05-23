@@ -1,4 +1,10 @@
 #wrapper-footer {
   background: $gray-700;
-  color: #fff;
+}
+
+#wrapper-footer-full {
+  background: $canes-green-alternate;
+  a {
+    color: $body-color;
+  }
 }

@@ -29,6 +29,7 @@ if ( is_front_page() ) {
 					<main class="site-main" id="main" role="main">
 
 						<?php
+						/*
 						$homepage_slider_posts = new WP_Query(
 							array (
 								'category_name' => 'homepage-slider',
@@ -46,6 +47,7 @@ if ( is_front_page() ) {
 							}
 							echo '</div></div>';
 						}
+						*/
 						?>
 
 						<?php

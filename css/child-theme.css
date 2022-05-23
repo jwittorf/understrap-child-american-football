@@ -46,7 +46,7 @@
   --bs-dark-rgb: 10, 24, 19;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 10, 24, 19;
+  --bs-body-color-rgb: 255, 255, 255;
   --bs-body-bg-rgb: 10, 24, 19;
   --bs-font-sans-serif: Montserrat, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -55,7 +55,7 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #0a1813;
+  --bs-body-color: #fff;
   --bs-body-bg: #0a1813;
 }
 
@@ -1954,15 +1954,15 @@ progress {
 .table, .wp-block-table table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #0a1813;
+  --bs-table-striped-color: #fff;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: #0a1813;
+  --bs-table-active-color: #fff;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: #0a1813;
+  --bs-table-hover-color: #fff;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: 1rem;
-  color: #0a1813;
+  color: #fff;
   vertical-align: top;
   border-color: #dee2e6;
 }
@@ -2202,7 +2202,7 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #0a1813;
+  color: #fff;
   background-color: #0a1813;
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -2268,7 +2268,7 @@ progress {
 .wpcf7 select:focus,
 .wpcf7 textarea:focus, .widget_categories select:focus,
 .widget_archive select:focus {
-  color: #0a1813;
+  color: #fff;
   background-color: #0a1813;
   border-color: #80b4a8;
   outline: 0;
@@ -2370,7 +2370,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: #0a1813;
+  color: #fff;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2404,7 +2404,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: #0a1813;
+  color: #fff;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2488,7 +2488,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: #0a1813;
+  color: #fff;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2551,7 +2551,7 @@ progress {
   padding: 0.375rem 0;
   margin-bottom: 0;
   line-height: 1.5;
-  color: #0a1813;
+  color: #fff;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -2647,7 +2647,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #0a1813;
+  color: #fff;
   background-color: #0a1813;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -2679,7 +2679,7 @@ textarea.form-control-lg {
 }
 .form-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #0a1813;
+  text-shadow: 0 0 0 #fff;
 }
 
 .form-select-sm {
@@ -3200,7 +3200,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #0a1813;
+  color: #fff;
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
@@ -3979,7 +3979,7 @@ textarea.form-control-lg {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
-  color: #0a1813;
+  color: #fff;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -4001,7 +4001,7 @@ textarea.form-control-lg {
   }
 }
 .btn:hover, .wpcf7 input[type=submit]:hover, .woocommerce-info a.button:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover {
-  color: #0a1813;
+  color: #fff;
 }
 .btn-check:focus + .btn, .wpcf7 .btn-check:focus + input[type=submit], .woocommerce-info .btn-check:focus + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-check:focus + a.button, .btn:focus, .wpcf7 input[type=submit]:focus, .woocommerce-info a.button:focus, .woocommerce-notices-wrapper .woocommerce-message a.button:focus {
   outline: 0;
@@ -4545,7 +4545,7 @@ textarea.form-control-lg {
   padding: 0 0;
   margin: 0;
   font-size: 1rem;
-  color: #0a1813;
+  color: #fff;
   text-align: left;
   list-style: none;
   background-color: transparent;
@@ -5718,7 +5718,7 @@ textarea.form-control-lg {
   width: 100%;
   padding: 1rem 1.25rem;
   font-size: 1rem;
-  color: #0a1813;
+  color: #fff;
   text-align: left;
   background-color: #0a1813;
   border: 0;
@@ -5746,7 +5746,7 @@ textarea.form-control-lg {
   height: 1.25rem;
   margin-left: auto;
   content: "";
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230a1813'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: 1.25rem;
   transition: transform 0.2s ease-in-out;
@@ -6132,7 +6132,7 @@ textarea.form-control-lg {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: #0a1813;
+  color: #fff;
   background-color: #e9ecef;
 }
 
@@ -7030,7 +7030,7 @@ textarea.form-control-lg {
 
 .popover-body {
   padding: 1rem 1rem;
-  color: #0a1813;
+  color: #fff;
 }
 
 .carousel {
@@ -15649,6 +15649,13 @@ h1, h2, h3, h4, h5, h6,
   background: #fff;
 }
 
+.page-template-homepage article.page header.entry-header {
+  border-bottom: 5px solid #ed7921;
+}
+.page-template-homepage article.page header.entry-header .entry-title {
+  font-size: 7.5rem;
+}
+
 #page {
   background: #172723;
 }
@@ -15662,11 +15669,17 @@ h1, h2, h3, h4, h5, h6,
   text-transform: uppercase;
 }
 #main-menu a.show {
-  border-bottom: 3px solid #ed7921;
+  border-bottom: 2px solid #ed7921;
 }
 
 #wrapper-footer {
   background: #172723;
+}
+
+#wrapper-footer-full {
+  background: #006A52;
+}
+#wrapper-footer-full a {
   color: #fff;
 }
 

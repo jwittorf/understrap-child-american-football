@@ -1,0 +1,19 @@
+.page-template-homepage {
+  article {
+    &.page {
+      header {
+        &.entry-header {
+          border-bottom: 5px solid $secondary;
+          //display: inline-block;
+          &,
+          * {
+            //display: inline-block;
+          }
+          .entry-title {
+            font-size: $font-size-lg * 6;
+          }
+        }
+      }
+    }
+  }
+}
