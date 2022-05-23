@@ -40,3 +40,16 @@ $headings-font-weight: 900;
 
 $navbar-dark-color: $white;
 $navbar-dark-hover-color: rgba($white, .55);
+
+$dropdown-padding-y: 0;
+$dropdown-bg: transparent;
+$dropdown-link-color: $primary;
+$dropdown-link-bg: $white;
+
+$border-radius: 0;
+
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: $secondary;
+
+$dropdown-link-active-color: $dropdown-link-hover-color;
+$dropdown-link-active-bg: $dropdown-link-hover-bg;

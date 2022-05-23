@@ -4,6 +4,9 @@
 // General, global tag/element definitions
 @import "general/typo";
 
+// Everything with a .class
+@import "components/dropdown";
+
 // Everything with an #id
 @import "layout/header";
 @import "layout/main-menu";
