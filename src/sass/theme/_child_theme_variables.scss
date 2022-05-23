@@ -11,3 +11,26 @@ $canes-orange: #ed7921;
 $primary: $canes-green;  // Once we've changed the value, we'll also make it the primary brand color.
 $secondary: $canes-orange;
 $gray-900: $canes-gray;
+
+$font-family-sans-serif:
+  // Custom Canes Font
+  Montserrat,
+  // Cross-platform generic font family (default user interface font)
+  system-ui,
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+  // Windows
+  "Segoe UI",
+  // Android
+  Roboto,
+  // older macOS and iOS
+  "Helvetica Neue",
+  // Linux
+  "Noto Sans",
+  "Liberation Sans",
+  // Basic web fallback
+  Arial,
+  // Sans serif fallback
+  sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
