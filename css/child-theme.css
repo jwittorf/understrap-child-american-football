@@ -15649,6 +15649,10 @@ h1, h2, h3, h4, h5, h6,
   background: #fff;
 }
 
+#page {
+  background: #172723;
+}
+
 #header-title {
   font-weight: 900;
 }
