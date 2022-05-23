@@ -442,7 +442,7 @@ progress {
   --bs-gray-400: #ced4da;
   --bs-gray-500: #adb5bd;
   --bs-gray-600: #6c757d;
-  --bs-gray-700: #495057;
+  --bs-gray-700: #172723;
   --bs-gray-800: #343a40;
   --bs-gray-900: #0a1813;
   --bs-primary: #006951;
@@ -464,7 +464,7 @@ progress {
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 10, 24, 19;
-  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-bg-rgb: 10, 24, 19;
   --bs-font-sans-serif: Montserrat, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -473,7 +473,7 @@ progress {
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #0a1813;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #0a1813;
 }
 
 .table, .wp-block-table table {
@@ -679,7 +679,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #fff;
+  background-color: #0a1813;
   border: 1px solid #dee2e6;
   border-radius: 0;
   max-width: 100%;

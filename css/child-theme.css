@@ -25,7 +25,7 @@
   --bs-gray-400: #ced4da;
   --bs-gray-500: #adb5bd;
   --bs-gray-600: #6c757d;
-  --bs-gray-700: #495057;
+  --bs-gray-700: #172723;
   --bs-gray-800: #343a40;
   --bs-gray-900: #0a1813;
   --bs-primary: #006951;
@@ -47,7 +47,7 @@
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 10, 24, 19;
-  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-bg-rgb: 10, 24, 19;
   --bs-font-sans-serif: Montserrat, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -56,7 +56,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #0a1813;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #0a1813;
 }
 
 *,
@@ -600,7 +600,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #fff;
+  background-color: #0a1813;
   border: 1px solid #dee2e6;
   border-radius: 0;
   max-width: 100%;
@@ -2203,7 +2203,7 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #0a1813;
-  background-color: #fff;
+  background-color: #0a1813;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   -webkit-appearance: none;
@@ -2269,7 +2269,7 @@ progress {
 .wpcf7 textarea:focus, .widget_categories select:focus,
 .widget_archive select:focus {
   color: #0a1813;
-  background-color: #fff;
+  background-color: #0a1813;
   border-color: #80b4a8;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(0, 105, 81, 0.25);
@@ -2648,7 +2648,7 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #0a1813;
-  background-color: #fff;
+  background-color: #0a1813;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -2712,7 +2712,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #fff;
+  background-color: #0a1813;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2814,10 +2814,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(0, 105, 81, 0.25);
+  box-shadow: 0 0 0 1px #0a1813, 0 0 0 0.25rem rgba(0, 105, 81, 0.25);
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(0, 105, 81, 0.25);
+  box-shadow: 0 0 0 1px #0a1813, 0 0 0 0.25rem rgba(0, 105, 81, 0.25);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -5024,9 +5024,9 @@ textarea.form-control-lg {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  color: #172723;
+  background-color: #0a1813;
+  border-color: #dee2e6 #dee2e6 #0a1813;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -5631,6 +5631,10 @@ textarea.form-control-lg {
   margin-left: -0.5rem;
   border-bottom: 0;
 }
+.card-header-tabs .nav-link.active {
+  background-color: #fff;
+  border-bottom-color: #fff;
+}
 
 .card-header-pills {
   margin-right: -0.5rem;
@@ -5716,7 +5720,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   color: #0a1813;
   text-align: left;
-  background-color: #fff;
+  background-color: #0a1813;
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
@@ -5767,7 +5771,7 @@ textarea.form-control-lg {
 }
 
 .accordion-item {
-  background-color: #fff;
+  background-color: #0a1813;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 .accordion-item:first-of-type {
@@ -6118,12 +6122,12 @@ textarea.form-control-lg {
 
 .list-group-item-action {
   width: 100%;
-  color: #495057;
+  color: #172723;
   text-align: inherit;
 }
 .list-group-item-action:hover, .list-group-item-action:focus {
   z-index: 1;
-  color: #495057;
+  color: #172723;
   text-decoration: none;
   background-color: #f8f9fa;
 }
@@ -15655,6 +15659,11 @@ h1, h2, h3, h4, h5, h6,
 }
 #main-menu a.show {
   border-bottom: 3px solid #ed7921;
+}
+
+#wrapper-footer {
+  background: #172723;
+  color: #fff;
 }
 
 .has-blue-color,
