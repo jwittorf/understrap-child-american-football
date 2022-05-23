@@ -1,4 +1,9 @@
 <?php
+/**
+ * Custom post type for Games
+ *
+ * @package UnderstrapChild
+ */
 
 if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 	return;

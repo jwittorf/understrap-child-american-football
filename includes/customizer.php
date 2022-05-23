@@ -1,4 +1,12 @@
 <?php
+/**
+ * Customizer options
+ *
+ * @package UnderstrapChild
+ */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 if ( !function_exists( 'understrap_child_customize_register' ) ) {
 	/**

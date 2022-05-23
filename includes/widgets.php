@@ -2,7 +2,7 @@
 /**
  * Declaring widgets
  *
- * @package UnderstrapPackage
+ * @package UnderstrapChild
  */
 
 // Exit if accessed directly.

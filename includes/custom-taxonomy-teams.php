@@ -1,4 +1,12 @@
 <?php
+/**
+ * Custom taxonomy for Teams
+ *
+ * @package UnderstrapChild
+ */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 // Create a custom taxonomy, to organize football related content for each team.
 function custom_taxonomy_teams()
