@@ -2,6 +2,7 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
 
+$white: #fff;
 
 //$canes-green: #1D7339;
 $canes-green: #006951;
@@ -34,3 +35,8 @@ $font-family-sans-serif:
   sans-serif,
   // Emoji fonts
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$headings-font-weight: 900;
+
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: rgba($white, .55);

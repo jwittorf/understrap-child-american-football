@@ -36,6 +36,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php
 		} else {
 			the_custom_logo();
+			$search = ["Kiel", "canes"];
+			$replace = ["Kiel<br />", "<span class='text-secondary'>canes</span>"];
+			echo sprintf("<h2 id='header-title' class='text-white text-uppercase h5'>%s</h2>", str_replace($search,
+				$replace,
+			get_bloginfo
+			('name')));
 		}
 		?>
 		<!-- end custom logo -->

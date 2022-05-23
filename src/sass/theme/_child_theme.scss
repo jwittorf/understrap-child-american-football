@@ -1,2 +1,9 @@
 // Custom fonts for child theme
 @import "fonts";
+
+// General, global tag/element definitions
+@import "general/typo";
+
+// Everything with an #id
+@import "layout/header";
+@import "layout/main-menu";
