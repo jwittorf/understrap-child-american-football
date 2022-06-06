@@ -15676,15 +15676,26 @@ h1, h2, h3, h4, h5, h6,
   border-bottom: 2px solid #ed7921;
 }
 
-#wrapper-footer {
-  background: #172723;
-}
-
 #wrapper-footer-full {
   background: #006A52;
 }
 #wrapper-footer-full a {
   color: #fff;
+}
+
+#wrapper-footer {
+  background: #172723;
+}
+#wrapper-footer .widget_nav_menu ul.menu {
+  list-style: none;
+  padding-left: 0;
+}
+#wrapper-footer .widget_nav_menu ul.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+#wrapper-footer .widget_nav_menu ul.menu a:focus, #wrapper-footer .widget_nav_menu ul.menu a:hover {
+  text-decoration: underline;
 }
 
 .has-blue-color,

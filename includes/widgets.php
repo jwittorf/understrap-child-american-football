@@ -78,5 +78,25 @@ if ( ! function_exists( 'understrap_child_widgets_init' ) ) {
 				'after_title'   => '',
 			)
 		);
+
+		// Adjust core menu widget
+		unregister_widget( 'WP_Nav_Menu_Widget' );
+		register_widget( 'WP_Nav_Menu_Widget_Custom' );
 	}
 }  // End of function_exists( 'understrap_child_widgets_init' ).
+
+/**
+ * Custom class to adjust menu widget heading markup
+ *
+ * @see WP_Nav_Menu_Widget
+ */
+class WP_Nav_Menu_Widget_Custom extends WP_Nav_Menu_Widget {
+	public function widget( $args, $instance ) {
+		// Set own title markup
+		$args['before_title'] = '<h5 class="widgettitle">';
+		$args['after_title'] = '</h5>';
+
+		// Call original method with adjusted args
+		Parent::widget( $args, $instance );
+	}
+}

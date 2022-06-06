@@ -24,7 +24,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
 			<div class="col-md-3" id="wrapper-footer-side">
-				<h3>Waiting for sidebar <code>footer_side</code></h3>
 				<?php if ( is_active_sidebar( 'footer_side' ) ) : ?>
 					<?php dynamic_sidebar( 'footer_side' ); ?>
 				<?php endif; ?>
@@ -40,13 +39,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 				<div class="row">
 					<div class="col-md-8">
-						<h3>Waiting for sidebar <code>footer_main_bottom_main</code></h3>
 						<?php if ( is_active_sidebar( 'footer_main_bottom_main' ) ) : ?>
 							<?php dynamic_sidebar( 'footer_main_bottom_main' ); ?>
 						<?php endif; ?>
 					</div>
 					<div class="col-md-4">
-						<h3>Waiting for sidebar <code>footer_main_bottom_side</code></h3>
 						<?php if ( is_active_sidebar( 'footer_main_bottom_side' ) ) : ?>
 							<?php dynamic_sidebar( 'footer_main_bottom_side' ); ?>
 						<?php endif; ?>

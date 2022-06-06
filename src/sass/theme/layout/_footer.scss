@@ -1,10 +1,23 @@
-#wrapper-footer {
-  background: $gray-700;
-}
-
 #wrapper-footer-full {
   background: $canes-green-alternate;
   a {
     color: $body-color;
+  }
+}
+
+#wrapper-footer {
+  background: $gray-700;
+  .widget_nav_menu {
+    ul.menu {
+      list-style: none;
+      padding-left: 0;
+      a {
+        color: $white;
+        text-decoration: none;
+        &:focus, &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
