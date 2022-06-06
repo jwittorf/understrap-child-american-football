@@ -15656,6 +15656,10 @@ h1, h2, h3, h4, h5, h6,
   font-size: 7.5rem;
 }
 
+.wp-block-social-links .wp-block-social-link-anchor span {
+  font-size: 0.875rem;
+}
+
 #page {
   background: #172723;
 }

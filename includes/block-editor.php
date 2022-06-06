@@ -56,5 +56,5 @@ function render_block_core_social_link_show_label( $attributes, $content, $block
 		)
 	);
 
-	return '<li ' . $wrapper_attributes . '><a href="' . esc_url( $url ) . '" aria-label="' . esc_attr( $label ) . '" ' . $attribute . ' class="wp-block-social-link-anchor"> ' . $icon . '<span>' . esc_attr( $label ) . '</span></a></li>';
+	return '<li ' . $wrapper_attributes . '><a href="' . esc_url( $url ) . '" aria-label="' . esc_attr( $label ) . '" ' . $attribute . ' class="wp-block-social-link-anchor"> ' . $icon . '<span class="ms-1">' . esc_attr( $label ) . '</span></a></li>';
 }
