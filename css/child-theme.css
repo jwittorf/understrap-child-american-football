@@ -15706,10 +15706,6 @@ h1, h2, h3, h4, h5, h6,
 #wrapper-footer .metaslider img:focus, #wrapper-footer .metaslider img:hover {
   filter: none;
 }
-#wrapper-footer .metaslider .flexslider .flex-viewport {
-  margin-left: 40px;
-  margin-right: 40px;
-}
 #wrapper-footer .metaslider .flexslider .flex-direction-nav li a {
   margin-top: -15px;
   background-image: url("../img/bg_direction_nav.png");
