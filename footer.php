@@ -31,7 +31,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-9" id="wrapper-footer-main">
 				<div class="row">
 					<div class="col-md-12">
-						<h3>Waiting for sidebar <code>footer_main_top</code></h3>
 						<?php if ( is_active_sidebar( 'footer_main_top' ) ) : ?>
 							<?php dynamic_sidebar( 'footer_main_top' ); ?>
 						<?php endif; ?>

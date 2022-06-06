@@ -15697,6 +15697,23 @@ h1, h2, h3, h4, h5, h6,
 #wrapper-footer .widget_nav_menu ul.menu a:focus, #wrapper-footer .widget_nav_menu ul.menu a:hover {
   text-decoration: underline;
 }
+#wrapper-footer .metaslider {
+  margin-bottom: 2rem !important;
+}
+#wrapper-footer .metaslider img {
+  filter: grayscale(1);
+}
+#wrapper-footer .metaslider img:focus, #wrapper-footer .metaslider img:hover {
+  filter: none;
+}
+#wrapper-footer .metaslider .flexslider .flex-viewport {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+#wrapper-footer .metaslider .flexslider .flex-direction-nav li a {
+  margin-top: -15px;
+  background-image: url("../img/bg_direction_nav.png");
+}
 
 .has-blue-color,
 .has-blue-color:visited {

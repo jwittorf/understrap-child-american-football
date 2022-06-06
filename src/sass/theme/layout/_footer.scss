@@ -20,4 +20,27 @@
       }
     }
   }
+  .metaslider {
+    margin-bottom: $spacer * 2 !important;
+    img {
+      filter: grayscale(1);
+      &:focus, &:hover {
+        filter: none;
+      }
+    }
+    .flexslider {
+      .flex-viewport {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      .flex-direction-nav {
+        li {
+          a {
+            margin-top: -15px;
+            background-image: url('../img/bg_direction_nav.png');
+          }
+        }
+      }
+    }
+  }
 }
