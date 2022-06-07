@@ -1,10 +1,10 @@
 {
-    "name": "holger1411/understrap-child",
+    "name": "jwittorf/understrap-child-american-football",
     "description": "Basic Child Theme for Understrap Theme Framework",
-    "type": "library",
+    "type": "wordpress-theme",
     "license": "GPL-2.0",
     "minimum-stability": "stable",
     "require": {},
     "keywords": ["wordpress","theme","bootstrap"],
-    "homepage": "https://github.com/holger1411/understrap-child"
+    "homepage": "https://git.die-netzwerkstatt.de/jwittorf/understrap-child-american-football"
 }
