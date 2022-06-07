@@ -10,10 +10,14 @@
             //display: inline-block;
           }
           .entry-title {
-            font-size: $font-size-lg * 6;
+            font-size: $font-size-lg * 3;
           }
         }
       }
     }
   }
+}
+
+#full-width-page-wrapper {
+  padding: 0;
 }

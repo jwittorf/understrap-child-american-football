@@ -15653,7 +15653,11 @@ h1, h2, h3, h4, h5, h6,
   border-bottom: 5px solid #ed7921;
 }
 .page-template-homepage article.page header.entry-header .entry-title {
-  font-size: 7.5rem;
+  font-size: 3.75rem;
+}
+
+#full-width-page-wrapper {
+  padding: 0;
 }
 
 .wp-block-social-links .wp-block-social-link-anchor span {

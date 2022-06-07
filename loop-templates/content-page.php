@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="d-flex align-items-end">
+	<div class="d-flex align-items-center">
 		<?php echo get_the_post_thumbnail( $post->ID ); ?>
 
 		<header class="entry-header">
