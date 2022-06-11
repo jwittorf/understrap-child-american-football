@@ -15,9 +15,9 @@ function custom_post_games()
 	// Set UI labels for Custom Post Type
 	// https://salferrarello.com/wordpress-__-vs-_x-functions/
 	$labels = array (
-		'name'               => _x( 'Games', 'Post Type General Name', 'understrap_child' ),
+		'name'               => _x( 'Games (old)', 'Post Type General Name', 'understrap_child' ),
 		'singular_name'      => _x( 'Game', 'Post Type Singular Name', 'understrap_child' ),
-		'menu_name'          => __( 'Games', 'understrap_child' ),
+		'menu_name'          => __( 'Games (old)', 'understrap_child' ),
 		'all_items'          => __( 'All games', 'understrap_child' ),
 		'view_item'          => __( 'View game', 'understrap_child' ),
 		'add_new_item'       => __( 'Add new game', 'understrap_child' ),
