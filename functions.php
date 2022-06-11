@@ -24,6 +24,21 @@ add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
 
 
 
+function understrap_child_remove_styles() {
+	// Remove default styles from mstw league manager plugin (for schedule and standings)
+	wp_dequeue_style( 'mstw_lm_style' );
+	wp_deregister_style( 'mstw_lm_style' );
+	wp_dequeue_style( 'mstw_scoreboard_style' );
+	wp_deregister_style( 'mstw_scoreboard_style' );
+
+	// Remove default styles from team-rosters plugin
+	wp_dequeue_style( 'mstw_tr_style' );
+	wp_deregister_style( 'mstw_tr_style' );
+}
+add_action( 'wp_enqueue_scripts', 'understrap_child_remove_styles', 20 );
+
+
+
 /**
  * Enqueue our stylesheet and javascript file
  */
