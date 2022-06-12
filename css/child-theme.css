@@ -15677,6 +15677,12 @@ body {
   background: #fff;
 }
 
+.jr-insta-datacontainer a {
+  background: transparent !important;
+  color: #ed7921 !important;
+  padding: 0 !important;
+}
+
 .page-template .d-flex.news-hero img.wp-post-image,
 .page-template article img.wp-post-image,
 .page-template-default .d-flex.news-hero img.wp-post-image,
@@ -16206,4 +16212,5 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   color: theme-color("danger");
   border: 1px solid #e9ecef;
 }
+
 /*# sourceMappingURL=child-theme.css.map */
