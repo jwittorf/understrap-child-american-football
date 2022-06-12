@@ -11,15 +11,6 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="d-flex align-items-center">
-		<?php echo get_the_post_thumbnail( $post->ID ); ?>
-
-		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
-
-	</div>
-
 	<div class="entry-content">
 
 		<?php
@@ -28,5 +19,11 @@ defined( 'ABSPATH' ) || exit;
 		?>
 
 	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+
+		<?php understrap_edit_post_link(); ?>
+
+	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

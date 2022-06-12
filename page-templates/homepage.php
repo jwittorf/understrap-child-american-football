@@ -29,14 +29,13 @@ if ( is_front_page() ) {
 					<main class="site-main" id="main" role="main">
 
 						<?php
-						/*
 						$homepage_slider_posts = new WP_Query(
 							array (
 								'category_name' => 'homepage-slider',
 							)
 						);
 						if ( $homepage_slider_posts->have_posts() ) {
-							echo '<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel"><div class="carousel-inner">';
+							echo '<div id="carousel-hero-homepage-slider" class="carousel carousel-dark slide" data-bs-ride="carousel"><div class="carousel-inner">';
 							$counter = 1;
 							while ( $homepage_slider_posts->have_posts() ) {
 								$homepage_slider_posts->the_post();
@@ -45,15 +44,15 @@ if ( is_front_page() ) {
 										$counter++,
 								) );
 							}
-							echo '</div></div>';
+							echo '</div></div>'; // Carousel
 						}
-						*/
+
 						?>
 
 						<?php
 						while ( have_posts() ) {
 							the_post();
-							get_template_part( 'loop-templates/content', 'page' );
+							get_template_part( 'loop-templates/content', 'homepage' );
 
 							// If comments are open or we have at least one comment, load up the comment template.
 							if ( comments_open() || get_comments_number() ) {
