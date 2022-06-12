@@ -82,6 +82,10 @@ if ( ! function_exists( 'understrap_child_widgets_init' ) ) {
 		// Adjust core menu widget
 		unregister_widget( 'WP_Nav_Menu_Widget' );
 		register_widget( 'WP_Nav_Menu_Widget_Custom' );
+
+		// Remove left and right sidebar, messed with Elementor
+		unregister_sidebar( 'right-sidebar' );
+		unregister_sidebar( 'left-sidebar' );
 	}
 }  // End of function_exists( 'understrap_child_widgets_init' ).
 
