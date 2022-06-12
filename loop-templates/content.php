@@ -15,7 +15,9 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="row">
 		<div class="col-md-6">
-			<?php echo get_the_post_thumbnail( $post->ID ); ?>
+			<?php echo sprintf( '<a href="%1$s" rel="bookmark" class="text-white text-decoration-none">%2$s</a>',
+				esc_url( get_permalink() ),
+				get_the_post_thumbnail( $post->ID )) ?>
 		</div>
 		<header class="entry-header px-3 mb-0 <?php echo (has_post_thumbnail()) ? 'col-md-6' : '' ?>"
 		        style="bottom: 0;">
