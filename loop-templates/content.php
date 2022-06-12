@@ -10,43 +10,31 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <div class="container">
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<article <?php post_class( 'mb-5' ); ?> id="post-<?php the_ID(); ?>">
 
-		<?php
-		the_title(
-			sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-			'</a></h2>'
-		);
-		?>
+	<div class="position-relative">
+		<?php echo get_the_post_thumbnail( $post->ID ); ?>
+		<header class="entry-header px-3 mb-0 <?php echo (has_post_thumbnail()) ? 'position-absolute' : '' ?>"
+		        style="bottom: 0;">
+			<?php the_title( '<h2 class="h1 entry-title">','</h2>' ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
+			<?php if ( 'post' === get_post_type() ) : ?>
 
-			<div class="entry-meta">
-				<?php understrap_posted_on(); ?>
-			</div><!-- .entry-meta -->
+				<div class="entry-meta">
+					<?php understrap_posted_on(); ?>
+				</div><!-- .entry-meta -->
 
-		<?php endif; ?>
+			<?php endif; ?>
+		</header><!-- .entry-header -->
+	</div>
 
-	</header><!-- .entry-header -->
-
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
-	<div class="entry-content">
-
+	<div class="entry-content p-3">
 		<?php
 		the_excerpt();
-		understrap_link_pages();
+		// understrap_link_pages();
 		?>
-
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
-
-</article><!-- #post-## -->
+	</article><!-- #post-## -->
 </div><!-- .container -->

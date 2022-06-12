@@ -2,7 +2,8 @@
 .page-template-homepage,
 .blog {
   .d-flex.news-hero,
-  article .d-flex {
+  //article .d-flex {
+  article {
     //&.page,
     //&.category-homepage-slider {
     img {
@@ -32,7 +33,7 @@
     }
     //}
     .entry-content {
-      a {
+      a:not(.btn) {
         color: $white;
         background: $canes-orange;
         padding: 3px;

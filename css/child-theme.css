@@ -15674,79 +15674,79 @@ body {
 }
 
 .page-template-default .d-flex.news-hero img.attachment-post-thumbnail,
-.page-template-default article .d-flex img.attachment-post-thumbnail,
+.page-template-default article img.attachment-post-thumbnail,
 .page-template-homepage .d-flex.news-hero img.attachment-post-thumbnail,
-.page-template-homepage article .d-flex img.attachment-post-thumbnail,
+.page-template-homepage article img.attachment-post-thumbnail,
 .blog .d-flex.news-hero img.attachment-post-thumbnail,
-.blog article .d-flex img.attachment-post-thumbnail {
+.blog article img.attachment-post-thumbnail {
   filter: grayscale(100%);
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
 }
 .page-template-default .d-flex.news-hero img.attachment-post-thumbnail:focus, .page-template-default .d-flex.news-hero img.attachment-post-thumbnail:hover,
-.page-template-default article .d-flex img.attachment-post-thumbnail:focus,
-.page-template-default article .d-flex img.attachment-post-thumbnail:hover,
+.page-template-default article img.attachment-post-thumbnail:focus,
+.page-template-default article img.attachment-post-thumbnail:hover,
 .page-template-homepage .d-flex.news-hero img.attachment-post-thumbnail:focus,
 .page-template-homepage .d-flex.news-hero img.attachment-post-thumbnail:hover,
-.page-template-homepage article .d-flex img.attachment-post-thumbnail:focus,
-.page-template-homepage article .d-flex img.attachment-post-thumbnail:hover,
+.page-template-homepage article img.attachment-post-thumbnail:focus,
+.page-template-homepage article img.attachment-post-thumbnail:hover,
 .blog .d-flex.news-hero img.attachment-post-thumbnail:focus,
 .blog .d-flex.news-hero img.attachment-post-thumbnail:hover,
-.blog article .d-flex img.attachment-post-thumbnail:focus,
-.blog article .d-flex img.attachment-post-thumbnail:hover {
+.blog article img.attachment-post-thumbnail:focus,
+.blog article img.attachment-post-thumbnail:hover {
   filter: grayscale(0%);
 }
 .page-template-default .d-flex.news-hero header.entry-header,
-.page-template-default article .d-flex header.entry-header,
+.page-template-default article header.entry-header,
 .page-template-homepage .d-flex.news-hero header.entry-header,
-.page-template-homepage article .d-flex header.entry-header,
+.page-template-homepage article header.entry-header,
 .blog .d-flex.news-hero header.entry-header,
-.blog article .d-flex header.entry-header {
+.blog article header.entry-header {
   margin-bottom: 1.5rem;
   line-height: 1;
 }
 .page-template-default .d-flex.news-hero header.entry-header:after,
-.page-template-default article .d-flex header.entry-header:after,
+.page-template-default article header.entry-header:after,
 .page-template-homepage .d-flex.news-hero header.entry-header:after,
-.page-template-homepage article .d-flex header.entry-header:after,
+.page-template-homepage article header.entry-header:after,
 .blog .d-flex.news-hero header.entry-header:after,
-.blog article .d-flex header.entry-header:after {
+.blog article header.entry-header:after {
   content: " ";
   display: inline-block;
   width: 25%;
   border-top: 5px solid #ed7921;
 }
 .page-template-default .d-flex.news-hero header.entry-header .entry-title,
-.page-template-default article .d-flex header.entry-header .entry-title,
+.page-template-default article header.entry-header .entry-title,
 .page-template-homepage .d-flex.news-hero header.entry-header .entry-title,
-.page-template-homepage article .d-flex header.entry-header .entry-title,
+.page-template-homepage article header.entry-header .entry-title,
 .blog .d-flex.news-hero header.entry-header .entry-title,
-.blog article .d-flex header.entry-header .entry-title {
+.blog article header.entry-header .entry-title {
   font-size: 3.75rem;
   margin-bottom: 0;
 }
-.page-template-default .d-flex.news-hero .entry-content a,
-.page-template-default article .d-flex .entry-content a,
-.page-template-homepage .d-flex.news-hero .entry-content a,
-.page-template-homepage article .d-flex .entry-content a,
-.blog .d-flex.news-hero .entry-content a,
-.blog article .d-flex .entry-content a {
+.page-template-default .d-flex.news-hero .entry-content a:not(.btn),
+.page-template-default article .entry-content a:not(.btn),
+.page-template-homepage .d-flex.news-hero .entry-content a:not(.btn),
+.page-template-homepage article .entry-content a:not(.btn),
+.blog .d-flex.news-hero .entry-content a:not(.btn),
+.blog article .entry-content a:not(.btn) {
   color: #fff;
   background: #ed7921;
   padding: 3px;
   text-decoration: none;
 }
-.page-template-default .d-flex.news-hero .entry-content a:focus, .page-template-default .d-flex.news-hero .entry-content a:hover,
-.page-template-default article .d-flex .entry-content a:focus,
-.page-template-default article .d-flex .entry-content a:hover,
-.page-template-homepage .d-flex.news-hero .entry-content a:focus,
-.page-template-homepage .d-flex.news-hero .entry-content a:hover,
-.page-template-homepage article .d-flex .entry-content a:focus,
-.page-template-homepage article .d-flex .entry-content a:hover,
-.blog .d-flex.news-hero .entry-content a:focus,
-.blog .d-flex.news-hero .entry-content a:hover,
-.blog article .d-flex .entry-content a:focus,
-.blog article .d-flex .entry-content a:hover {
+.page-template-default .d-flex.news-hero .entry-content a:not(.btn):focus, .page-template-default .d-flex.news-hero .entry-content a:not(.btn):hover,
+.page-template-default article .entry-content a:not(.btn):focus,
+.page-template-default article .entry-content a:not(.btn):hover,
+.page-template-homepage .d-flex.news-hero .entry-content a:not(.btn):focus,
+.page-template-homepage .d-flex.news-hero .entry-content a:not(.btn):hover,
+.page-template-homepage article .entry-content a:not(.btn):focus,
+.page-template-homepage article .entry-content a:not(.btn):hover,
+.blog .d-flex.news-hero .entry-content a:not(.btn):focus,
+.blog .d-flex.news-hero .entry-content a:not(.btn):hover,
+.blog article .entry-content a:not(.btn):focus,
+.blog article .entry-content a:not(.btn):hover {
   background: #0a1813;
 }
 
