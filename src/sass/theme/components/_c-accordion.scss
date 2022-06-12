@@ -1,0 +1,7 @@
+.accordion__item {
+  .accordion__title {
+    &:after {
+      color: $secondary;
+    }
+  }
+}

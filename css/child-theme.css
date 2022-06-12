@@ -15669,6 +15669,10 @@ body {
   color: #F8F8F0;
 }
 
+.accordion__item .accordion__title:after {
+  color: #ed7921;
+}
+
 .dropdown-item {
   background: #fff;
 }
@@ -16202,5 +16206,4 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   color: theme-color("danger");
   border: 1px solid #e9ecef;
 }
-
 /*# sourceMappingURL=child-theme.css.map */
