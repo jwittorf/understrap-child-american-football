@@ -28,8 +28,9 @@
           border-top: 5px solid $secondary;
         }
         .entry-title {
-          font-size: $font-size-lg * 3;
+          font-size: $font-size-lg * 2;
           margin-bottom: 0;
+          text-shadow: 1px 1px 5px $canes-gray;
         }
       }
     }
@@ -50,4 +51,23 @@
 
 #full-width-page-wrapper {
   padding: 0;
+}
+
+
+@include media-breakpoint-up(md) {
+  .page-template,
+  .page-template-default,
+  .page-template-homepage,
+  .blog {
+    .d-flex.news-hero,
+    article {
+      header {
+        &.entry-header {
+          .entry-title {
+            font-size: $font-size-lg * 4;
+          }
+        }
+      }
+    }
+  }
 }

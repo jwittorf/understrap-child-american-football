@@ -15734,8 +15734,9 @@ body {
 .page-template-homepage article header.entry-header .entry-title,
 .blog .d-flex.news-hero header.entry-header .entry-title,
 .blog article header.entry-header .entry-title {
-  font-size: 3.75rem;
+  font-size: 2.5rem;
   margin-bottom: 0;
+  text-shadow: 1px 1px 5px #0a1813;
 }
 .page-template .d-flex.news-hero .entry-content a:not(.btn),
 .page-template article .entry-content a:not(.btn),
@@ -15772,6 +15773,18 @@ body {
   padding: 0;
 }
 
+@media (min-width: 768px) {
+  .page-template .d-flex.news-hero header.entry-header .entry-title,
+.page-template article header.entry-header .entry-title,
+.page-template-default .d-flex.news-hero header.entry-header .entry-title,
+.page-template-default article header.entry-header .entry-title,
+.page-template-homepage .d-flex.news-hero header.entry-header .entry-title,
+.page-template-homepage article header.entry-header .entry-title,
+.blog .d-flex.news-hero header.entry-header .entry-title,
+.blog article header.entry-header .entry-title {
+    font-size: 5rem;
+  }
+}
 .wp-block-social-links .wp-block-social-link-anchor span {
   font-size: 0.875rem;
 }
