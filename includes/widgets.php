@@ -8,8 +8,16 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'widgets_init', 'understrap_child_widgets_init' );
+// Child theme's function.php is called before parent, that's why we need to set the priority to 11.
+// Otherwise, the sidebars aren't registered yet and our unregister-calls would have no effect.
+add_action( 'widgets_init', 'understrap_child_widgets_remove', 11 );
+function understrap_child_widgets_remove() {
+	// Remove left and right sidebar, messed with Elementor
+	unregister_sidebar( 'right-sidebar' );
+	unregister_sidebar( 'left-sidebar' );
+}
 
+add_action( 'widgets_init', 'understrap_child_widgets_init' );
 if ( ! function_exists( 'understrap_child_widgets_init' ) ) {
 	/**
 	 * Initializes themes widgets.
@@ -82,10 +90,6 @@ if ( ! function_exists( 'understrap_child_widgets_init' ) ) {
 		// Adjust core menu widget
 		unregister_widget( 'WP_Nav_Menu_Widget' );
 		register_widget( 'WP_Nav_Menu_Widget_Custom' );
-
-		// Remove left and right sidebar, messed with Elementor
-		unregister_sidebar( 'right-sidebar' );
-		unregister_sidebar( 'left-sidebar' );
 	}
 }  // End of function_exists( 'understrap_child_widgets_init' ).
 
