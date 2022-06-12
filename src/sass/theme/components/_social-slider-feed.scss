@@ -1,4 +1,14 @@
+.pllexislider {
+  #wis-slides {
+    a {
+      margin-left: 0;
+      border-left: 0;
+    }
+  }
+}
+
 .jr-insta-datacontainer {
+  font-size: $font-size-sm;
   a {
     background: transparent !important;
     color: $canes-orange !important;

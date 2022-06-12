@@ -15681,6 +15681,14 @@ body .elementor-column-gap-default > .elementor-column > .elementor-element-popu
   padding: 0;
 }
 
+.pllexislider #wis-slides a {
+  margin-left: 0;
+  border-left: 0;
+}
+
+.jr-insta-datacontainer {
+  font-size: 0.875rem;
+}
 .jr-insta-datacontainer a {
   background: transparent !important;
   color: #ed7921 !important;
@@ -15747,7 +15755,7 @@ body .entry-footer a:not(.btn):hover {
 @media (min-width: 768px) {
   body .d-flex.news-hero header.entry-header .entry-title,
 body article header.entry-header .entry-title {
-    font-size: 5rem;
+    font-size: 3.75rem;
   }
 }
 .wp-block-social-links .wp-block-social-link-anchor span {
