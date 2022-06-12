@@ -29,6 +29,17 @@
         }
       }
     //}
+    .entry-content {
+      a {
+        color: $white;
+        background: $canes-orange;
+        padding: 3px;
+        text-decoration: none;
+        &:focus, &:hover {
+          background: $canes-gray;
+        }
+      }
+    }
   }
 }
 

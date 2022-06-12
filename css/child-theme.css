@@ -15650,6 +15650,10 @@ h1, h2, h3, h4, h5, h6,
   text-transform: uppercase;
 }
 
+body {
+  background-image: linear-gradient(to bottom, #006951, #0a1813);
+}
+
 ::-moz-selection {
   background: rgba(237, 121, 33, 0.99);
   color: #F8F8F0;
@@ -15697,6 +15701,18 @@ h1, h2, h3, h4, h5, h6,
   font-size: 3.75rem;
   margin-bottom: 0;
 }
+.page-template-default article .entry-content a,
+.page-template-homepage article .entry-content a {
+  color: #fff;
+  background: #ed7921;
+  padding: 3px;
+  text-decoration: none;
+}
+.page-template-default article .entry-content a:focus, .page-template-default article .entry-content a:hover,
+.page-template-homepage article .entry-content a:focus,
+.page-template-homepage article .entry-content a:hover {
+  background: #0a1813;
+}
 
 #full-width-page-wrapper {
   padding: 0;
@@ -15704,10 +15720,6 @@ h1, h2, h3, h4, h5, h6,
 
 .wp-block-social-links .wp-block-social-link-anchor span {
   font-size: 0.875rem;
-}
-
-#page {
-  background: #172723;
 }
 
 #header-title {

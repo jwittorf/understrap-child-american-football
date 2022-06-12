@@ -1,3 +1,7 @@
+body {
+  background-image: linear-gradient(to bottom, $canes-green, $canes-gray);
+}
+
 ::selection {
   background: rgba(rgba($canes-orange, 1), 0.99);
   color: #F8F8F0;
