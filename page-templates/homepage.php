@@ -20,7 +20,7 @@ if ( is_front_page() ) {
 
 	<div class="wrapper" id="full-width-page-wrapper">
 
-		<div class="<?php echo esc_attr( $container ); ?>" id="content">
+		<div class="<?php echo esc_attr( $container ); ?> px-0" id="content">
 
 			<div class="row">
 
@@ -35,7 +35,7 @@ if ( is_front_page() ) {
 							)
 						);
 						if ( $homepage_slider_posts->have_posts() ) {
-							echo '<div id="carousel-hero-homepage-slider" class="carousel carousel-dark slide" data-bs-ride="carousel"><div class="carousel-inner">';
+							echo '<div id="carousel-hero-homepage-slider" class="carousel carousel-dark slide mb-5" data-bs-ride="carousel"><div class="carousel-inner">';
 							$counter = 1;
 							while ( $homepage_slider_posts->have_posts() ) {
 								$homepage_slider_posts->the_post();

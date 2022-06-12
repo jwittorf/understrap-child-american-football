@@ -1,3 +1,4 @@
+.page-template,
 .page-template-default,
 .page-template-homepage,
 .blog {
@@ -7,7 +8,8 @@
     //&.page,
     //&.category-homepage-slider {
     img {
-      &.attachment-post-thumbnail, {
+      //&.attachment-post-thumbnail, {
+      &.wp-post-image, {
         filter: grayscale(100%);
         mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
         &:focus, &:hover {

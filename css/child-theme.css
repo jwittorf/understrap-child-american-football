@@ -15673,29 +15673,37 @@ body {
   background: #fff;
 }
 
-.page-template-default .d-flex.news-hero img.attachment-post-thumbnail,
-.page-template-default article img.attachment-post-thumbnail,
-.page-template-homepage .d-flex.news-hero img.attachment-post-thumbnail,
-.page-template-homepage article img.attachment-post-thumbnail,
-.blog .d-flex.news-hero img.attachment-post-thumbnail,
-.blog article img.attachment-post-thumbnail {
+.page-template .d-flex.news-hero img.wp-post-image,
+.page-template article img.wp-post-image,
+.page-template-default .d-flex.news-hero img.wp-post-image,
+.page-template-default article img.wp-post-image,
+.page-template-homepage .d-flex.news-hero img.wp-post-image,
+.page-template-homepage article img.wp-post-image,
+.blog .d-flex.news-hero img.wp-post-image,
+.blog article img.wp-post-image {
   filter: grayscale(100%);
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
 }
-.page-template-default .d-flex.news-hero img.attachment-post-thumbnail:focus, .page-template-default .d-flex.news-hero img.attachment-post-thumbnail:hover,
-.page-template-default article img.attachment-post-thumbnail:focus,
-.page-template-default article img.attachment-post-thumbnail:hover,
-.page-template-homepage .d-flex.news-hero img.attachment-post-thumbnail:focus,
-.page-template-homepage .d-flex.news-hero img.attachment-post-thumbnail:hover,
-.page-template-homepage article img.attachment-post-thumbnail:focus,
-.page-template-homepage article img.attachment-post-thumbnail:hover,
-.blog .d-flex.news-hero img.attachment-post-thumbnail:focus,
-.blog .d-flex.news-hero img.attachment-post-thumbnail:hover,
-.blog article img.attachment-post-thumbnail:focus,
-.blog article img.attachment-post-thumbnail:hover {
+.page-template .d-flex.news-hero img.wp-post-image:focus, .page-template .d-flex.news-hero img.wp-post-image:hover,
+.page-template article img.wp-post-image:focus,
+.page-template article img.wp-post-image:hover,
+.page-template-default .d-flex.news-hero img.wp-post-image:focus,
+.page-template-default .d-flex.news-hero img.wp-post-image:hover,
+.page-template-default article img.wp-post-image:focus,
+.page-template-default article img.wp-post-image:hover,
+.page-template-homepage .d-flex.news-hero img.wp-post-image:focus,
+.page-template-homepage .d-flex.news-hero img.wp-post-image:hover,
+.page-template-homepage article img.wp-post-image:focus,
+.page-template-homepage article img.wp-post-image:hover,
+.blog .d-flex.news-hero img.wp-post-image:focus,
+.blog .d-flex.news-hero img.wp-post-image:hover,
+.blog article img.wp-post-image:focus,
+.blog article img.wp-post-image:hover {
   filter: grayscale(0%);
 }
+.page-template .d-flex.news-hero header.entry-header,
+.page-template article header.entry-header,
 .page-template-default .d-flex.news-hero header.entry-header,
 .page-template-default article header.entry-header,
 .page-template-homepage .d-flex.news-hero header.entry-header,
@@ -15705,6 +15713,8 @@ body {
   margin-bottom: 1.5rem;
   line-height: 1;
 }
+.page-template .d-flex.news-hero header.entry-header:after,
+.page-template article header.entry-header:after,
 .page-template-default .d-flex.news-hero header.entry-header:after,
 .page-template-default article header.entry-header:after,
 .page-template-homepage .d-flex.news-hero header.entry-header:after,
@@ -15716,6 +15726,8 @@ body {
   width: 25%;
   border-top: 5px solid #ed7921;
 }
+.page-template .d-flex.news-hero header.entry-header .entry-title,
+.page-template article header.entry-header .entry-title,
 .page-template-default .d-flex.news-hero header.entry-header .entry-title,
 .page-template-default article header.entry-header .entry-title,
 .page-template-homepage .d-flex.news-hero header.entry-header .entry-title,
@@ -15725,6 +15737,8 @@ body {
   font-size: 3.75rem;
   margin-bottom: 0;
 }
+.page-template .d-flex.news-hero .entry-content a:not(.btn),
+.page-template article .entry-content a:not(.btn),
 .page-template-default .d-flex.news-hero .entry-content a:not(.btn),
 .page-template-default article .entry-content a:not(.btn),
 .page-template-homepage .d-flex.news-hero .entry-content a:not(.btn),
@@ -15736,7 +15750,11 @@ body {
   padding: 3px;
   text-decoration: none;
 }
-.page-template-default .d-flex.news-hero .entry-content a:not(.btn):focus, .page-template-default .d-flex.news-hero .entry-content a:not(.btn):hover,
+.page-template .d-flex.news-hero .entry-content a:not(.btn):focus, .page-template .d-flex.news-hero .entry-content a:not(.btn):hover,
+.page-template article .entry-content a:not(.btn):focus,
+.page-template article .entry-content a:not(.btn):hover,
+.page-template-default .d-flex.news-hero .entry-content a:not(.btn):focus,
+.page-template-default .d-flex.news-hero .entry-content a:not(.btn):hover,
 .page-template-default article .entry-content a:not(.btn):focus,
 .page-template-default article .entry-content a:not(.btn):hover,
 .page-template-homepage .d-flex.news-hero .entry-content a:not(.btn):focus,

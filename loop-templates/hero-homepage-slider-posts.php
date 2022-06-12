@@ -14,8 +14,8 @@ defined( 'ABSPATH' ) || exit;
 
 		<div class="d-flex align-items-center">
 			<!-- Post image -->
-			<?php echo get_the_post_thumbnail( $post->ID ); ?>
-			<header class="entry-header">
+			<?php echo get_the_post_thumbnail( $post->ID, 'post-thumbnail', array( 'class' => 'w-100' ) ); ?>
+			<header class="entry-header px-3 mb-0 position-absolute" style="bottom: 0;">
 				<?php the_title('<h2 class="h1 entry-title">', '</h2>'); ?>
 			</header><!-- .entry-header -->
 		</div><!-- .d-flex -->
