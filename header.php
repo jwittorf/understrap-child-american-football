@@ -34,7 +34,6 @@ $navbar_type = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 				'understrap'
 			); ?></a>
 
-		<?php get_template_part( 'global-templates/navbar', 'topnav' ); ?>
 		<?php get_template_part( 'global-templates/navbar', $navbar_type . '-' . $bootstrap_version ); ?>
 
 	</header><!-- #wrapper-navbar end -->

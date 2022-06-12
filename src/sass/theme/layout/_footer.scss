@@ -7,6 +7,7 @@
 
 #wrapper-footer {
   background: $gray-700;
+  padding-bottom: $grid-gutter-width * 2;
   .widget_nav_menu {
     ul.menu {
       list-style: none;

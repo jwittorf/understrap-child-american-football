@@ -65,7 +65,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- wrapper end -->
 
+<?php get_template_part( 'global-templates/navbar', 'topnav' ); ?>
+
 <?php wp_footer(); ?>
+
 
 </body>
 

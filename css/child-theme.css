@@ -15762,6 +15762,13 @@ body article header.entry-header .entry-title {
   font-size: 0.875rem;
 }
 
+.mstw-lm-table tbody td img {
+  margin-right: 0.5rem;
+}
+.mstw-lm-table tbody td a {
+  margin-left: 0 !important;
+}
+
 #header-title {
   font-weight: 900;
 }
@@ -15790,6 +15797,7 @@ body article header.entry-header .entry-title {
 
 #wrapper-footer {
   background: #172723;
+  padding-bottom: 3rem;
 }
 #wrapper-footer .widget_nav_menu ul.menu {
   list-style: none;
@@ -15814,6 +15822,10 @@ body article header.entry-header .entry-title {
 #wrapper-footer .metaslider .flexslider .flex-direction-nav li a {
   margin-top: -15px;
   background-image: url("../img/bg_direction_nav.png");
+}
+
+#menu-top-menue-wrapper {
+  border-top: 2px solid #172723;
 }
 
 .has-blue-color,
