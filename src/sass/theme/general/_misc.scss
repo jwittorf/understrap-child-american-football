@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(to bottom, $canes-green, $canes-gray);
+  background-image: linear-gradient(to bottom, $canes-green 0%, $canes-gray 40%, $canes-gray 100%);
 }
 
 ::selection {
