@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="d-flex align-items-center flex-column mb-3 mb-md-5 news-hero-single">
 		<?php echo get_the_post_thumbnail( $post->ID, 'post-thumbnail', array( 'class' => 'w-100' ) ); ?>
 
-		<header class="entry-header px-3 mb-0">
+		<header class="entry-header mb-0 px-3">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<div class="entry-meta">
 				<?php understrap_posted_on(); ?>
