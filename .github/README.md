@@ -1,8 +1,34 @@
+# WordPress Theming Semesterprojekt "American Football"
+
+* Julian Wittorf (Bachelor Medieningenieur*in)
+* https://github.com/jwittorf/understrap-child-american-football
+* Fachhochschule Kiel (Prof. Dr. Franziska Uhing)
+* Sommersemester 2022
+
+## Basic commands and instructions
+
+* `npm install` on first install
+* `npm run dist` to create a new "release"
+* `npm run watch-lr` to watch for `scss` changes and Livereload in the browser
+* Make styling changes in `web/app/themes/understrap-child-american-football/src/sass/theme`
+
+## Custom "features"/"highlights" and intentions
+
+1. Have a custom post-based slider for showing images and headlines on homepage (full width).
+2. Use a boxed featured-image on pages.
+3. Make the featured-image on archive/list pages full-width, make content (list of posts) boxed.
+   1. Show post-image on single-page in full-width as well.
+4. Use custom menu (still called "top" but is now actually at the bottom).
+5. Use widgets for global footer content.
+6. No sidebars, use elementor for individual page design.
+7. Integration/adjustments for league plugin with team, roster, schedule and games
+(instead of old, custom post type and taxonomy, just keeping this for reference).
+
 <p align="center"><img src="https://understrap.com/wp-content/uploads/2022/02/Understrap_Logo_Color.svg" width="320" height="auto"></p>
 
 #### See: [Official Demo](https://demos.understrap.com) | Read: [Official Docs Page](https://docs.understrap.com/)
 
-# Understrap Child Starter Theme
+## Understrap Child Starter Theme
 
 Website: [understrap.com](https://understrap.com)
 
