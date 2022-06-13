@@ -15681,6 +15681,10 @@ body .elementor-column-gap-default > .elementor-column > .elementor-element-popu
   padding: 0;
 }
 
+.grecaptcha-badge {
+  z-index: 9999;
+}
+
 .pllexislider #wis-slides a {
   margin-left: 0;
   border-left: 0;

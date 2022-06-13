@@ -31,3 +31,12 @@ function understrap_child_filter_the_content( $content ) {
 // too bad, got mixed up then replacing text in HTML links
 //add_filter( 'the_content', 'understrap_child_filter_the_content' );
 //add_filter( 'the_excerpt', 'understrap_child_filter_the_content' );
+
+// Don't autoblock metaslider scripts by Cookiebot (cookie consent manager)
+function prefix_cookiebot_js( $html, $handle ) {
+	if ( str_starts_with( $handle, 'metaslider' ) ) {
+		$html = str_replace( '<script', '<script cookiebot-consent="ignore"', $html );
+	}
+	return $html;
+}
+add_filter( 'script_loader_tag', 'prefix_cookiebot_js', 10, 2 );
