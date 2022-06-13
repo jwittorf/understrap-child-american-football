@@ -38,7 +38,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			the_custom_logo();
 			$search = ["Baltic", "canes"];
 			$replace = ["Baltic<br />", "<span class='text-secondary'>canes</span>"];
-			echo sprintf( '<h2 id="header-title" class="text-uppercase h5"><a href="%2$s" class="text-white text-decoration-none">%1$s</a></h2>',
+			echo sprintf( '<h2 id="header-title" class="text-uppercase h5 d-none d-md-block"><a href="%2$s" class="text-white text-decoration-none">%1$s</a></h2>',
 				str_replace( $search, $replace, get_bloginfo('name') ),
 				esc_url( home_url( '/' ) )
 			);

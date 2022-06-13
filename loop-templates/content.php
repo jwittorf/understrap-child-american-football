@@ -9,9 +9,9 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="container">
+<div class="container px-0">
 
-	<article <?php post_class( 'mb-5' ); ?> id="post-<?php the_ID(); ?>">
+	<article <?php post_class( array( 'mb-3', 'mb-md-5' ) ); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="row">
 		<div class="col-md-6">
@@ -36,7 +36,7 @@ defined( 'ABSPATH' ) || exit;
 		</header><!-- .entry-header -->
 	</div>
 
-	<div class="entry-content p-3">
+	<div class="entry-content py-3">
 		<?php
 		the_excerpt();
 		// understrap_link_pages();

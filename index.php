@@ -34,10 +34,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<main class="site-main" id="main">
 
-					<div class="d-flex align-items-center news-hero">
+					<div class="d-flex align-items-center news-hero mb-3 mb-lg-5">
 						<?php echo get_the_post_thumbnail($wp_query->queried_object_id, 'post-thumbnail', array( 'class' => 'w-100' ) ); ?>
 
-						<header class="entry-header px-3 mb-0 position-absolute" style="left: 50%">
+						<header class="entry-header mb-0 position-absolute" style="left: 40%">
 							<h1 class="entry-title">
 								<?php echo get_the_title($wp_query->queried_object_id); ?>
 							</h1>

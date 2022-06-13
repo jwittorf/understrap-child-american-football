@@ -9,13 +9,14 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="container">
+<div class="container px-0">
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="d-flex align-items-center position-relative mb-5">
+	<div class="d-flex align-items-center position-relative mb-3 mb-md-5">
 		<?php echo get_the_post_thumbnail( $post->ID, 'post-thumbnail', array( 'class' => 'w-100' ) ); ?>
 
-		<header class="entry-header px-3 mb-0 <?php echo (has_post_thumbnail()) ? 'position-absolute' : '' ?>" style="bottom: 0;">
+		<header class="entry-header mb-0 px-3 <?php echo (has_post_thumbnail()) ? 'position-absolute' : '' ?>"
+		        style="bottom: 0;">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 

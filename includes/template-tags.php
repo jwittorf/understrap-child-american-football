@@ -43,7 +43,7 @@ function understrap_post_nav() {
 		return;
 	}
 	?>
-	<nav class="container navigation post-navigation mt-4">
+	<nav class="container navigation post-navigation px-0 mt-4">
 		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
 		<div class="d-flex nav-links justify-content-between">
 			<?php

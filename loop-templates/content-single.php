@@ -9,13 +9,12 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="container">
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="d-flex align-items-center position-relative mb-5">
+	<div class="d-flex align-items-center flex-column mb-3 mb-md-5 news-hero-single">
 		<?php echo get_the_post_thumbnail( $post->ID, 'post-thumbnail', array( 'class' => 'w-100' ) ); ?>
 
-		<header class="entry-header px-3 mb-0 <?php echo (has_post_thumbnail()) ? 'position-absolute' : '' ?>" style="bottom: 0;">
+		<header class="entry-header px-3 mb-0">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<div class="entry-meta">
 				<?php understrap_posted_on(); ?>
@@ -23,6 +22,7 @@ defined( 'ABSPATH' ) || exit;
 	</header><!-- .entry-header -->
 	</div>
 
+	<div class="container px-0">
 	<div class="entry-content mb-2">
 
 		<?php
@@ -32,11 +32,11 @@ defined( 'ABSPATH' ) || exit;
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer bg-dark p-3">
+	<footer class="entry-footer bg-primary p-3 d-flex justify-content-between">
 
 		<?php understrap_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
+	</div><!-- .container -->
 
 </article><!-- #post-## -->
-</div><!-- .container -->

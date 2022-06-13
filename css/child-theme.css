@@ -15695,15 +15695,26 @@ body .elementor-column-gap-default > .elementor-column > .elementor-element-popu
   padding: 0 !important;
 }
 
+#carousel-hero-homepage-slider,
+.news-hero,
+.news-hero-single {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.wrapper {
+  padding-top: 0.75rem;
+}
+
 body .d-flex.news-hero .entry-header .entry-title {
-  font-size: 3.75rem;
+  font-size: 1.875rem;
 }
 body img.wp-post-image {
   filter: grayscale(100%);
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
 }
-body img.wp-post-image:focus, body img.wp-post-image:hover {
+body img.wp-post-image:focus, body img.wp-post-image:hover, body img.wp-post-image:active {
   filter: grayscale(0%);
 }
 body header.entry-header {
@@ -15717,13 +15728,12 @@ body header.entry-header:after {
   border-top: 5px solid #ed7921;
 }
 body header.entry-header .entry-title {
-  font-size: 2.5rem;
+  font-size: 1.875rem;
   margin-bottom: 0;
   text-shadow: 1px 1px 5px #0a1813;
 }
-body .entry-content {
-  font-size: 1.3rem;
-  padding-left: 1rem;
+body header.entry-header .entry-meta {
+  font-size: 1rem;
 }
 body .entry-content a:not(.btn),
 body .entry-footer a:not(.btn) {
@@ -15732,7 +15742,6 @@ body .entry-footer a:not(.btn) {
   text-decoration: none;
   padding-left: 0.25rem;
   border-left: 0.5em #ed7921 solid;
-  margin-left: 0.5rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.2, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -15753,16 +15762,19 @@ body .entry-footer a:not(.btn):hover {
 }
 
 a.sgdg-grid-a, a.image-link {
-  margin-left: 0;
-  border-left: 0;
+  margin-left: 0 !important;
+  border-left: 0 !important;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   body .d-flex.news-hero .entry-header .entry-title {
     font-size: 7.5rem;
   }
   body article header.entry-header .entry-title {
-    font-size: 3.75rem;
+    font-size: 3.125rem;
+  }
+  body .entry-content {
+    font-size: 1.3rem;
   }
 }
 .wp-block-social-links .wp-block-social-link-anchor span {
@@ -15786,6 +15798,11 @@ a.sgdg-grid-a, a.image-link {
 }
 #main-menu a.show {
   border-bottom: 2px solid #ed7921;
+}
+
+#carousel-hero-homepage-slider {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
 }
 
 #comments {
